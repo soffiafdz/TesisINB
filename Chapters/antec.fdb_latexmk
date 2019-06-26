@@ -1,0 +1,12 @@
+# Fdb version 3
+["pdflatex"] 1561415598 "antec.tex" "antec.pdf" "antec" 1561415598
+  "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
+  "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/usr/local/texlive/2019/texmf-dist/web2c/texmf.cnf" 1559599508 35683 50a220a7a2a515000b0c7ffa04d5889f ""
+  "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1560452996 4264881 87d0dc6d33fd719ca02e940b4dad2267 ""
+  "/usr/local/texlive/2019/texmf.cnf" 1560452963 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
+  "antec.aux" 1561411202 8 a94a2480d3289e625eea47cd1b285758 ""
+  "antec.tex" 1561411242 2066 97d068d0a2a01944917add10491abe73 ""
+  (generated)
+  "antec.pdf"
+  "antec.log"

@@ -1,0 +1,62 @@
+\documentclass[12pt, letterpaper, oneside, openany]{book}
+\usepackage[spanish, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage[margin=25mm]{geometry}
+\usepackage[style=apa]{biblatex}
+\usepackage{textcomp}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{blindtext}
+\usepackage[inline]{enumitem}
+
+\graphicspath{ {Figures/} }
+\addbibresource{Thesis.bib}
+
+\onehalfspacing
+\setlength{\parskip}{0.5em}
+
+\addto\captionsspanish{
+    \renewcommand{\contentsname}
+    {Índice}
+}
+
+\begin{document}
+\input{Chapters/titlepage}
+
+\pagestyle{empty}
+\input{Chapters/signatures}
+\input{Chapters/dedic}
+\input{Chapters/agrad}
+
+
+\frontmatter
+\pagestyle{plain}
+\chapter*{\center Resumen}
+\addcontentsline{toc}{chapter}{Resumen Español}
+\input{Chapters/absSp}
+
+\chapter*{\center Abstract}
+\addcontentsline{toc}{chapter}{Resumen Inglés}
+\input{Chapters/absEn}
+\tableofcontents
+
+\mainmatter
+\definecolor{gray42}{gray}{0.42}
+\newcommand{\hsp}{\hspace{15pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray42}{\textbar}\hsp}{0pt}{\Huge\bfseries}
+
+\chapter{Introducción}
+\input{Chapters/intro}
+
+\chapter{Antecedentes}
+\input{Chapters/antec}
+
+\backmatter
+\addcontentsline{toc}{chapter}{\bibname}
+\printbibliography
+\end{document}
+
