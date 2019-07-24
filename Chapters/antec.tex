@@ -147,6 +147,65 @@ Estos estudios de neuroimagen y conectividad permiten tener una visión de los c
 
 % Resumir los circuitos mencionados? Podría ser intro para las redes seleccionadas Naaa
 \section{Teoría de Grafos}
+Desde el siglo XIX es bien sabido que los elementos neuronales del cerebro constituyen una formidablemente complicada red estructural. Desde los años 90s, el aumento de nuestro entendimiento de la física de los sistemas complejos ha llevado al desarrollo de la ciencia de las redes, un esfuerzo interdisciplinario de caracterizar la estructura y función de las redes (Bullmore & Sporns).
+
+Las redes estructurales o funcionales del cerebro pueden ser estudiadas por medio de la teoría de grafos siguiendo los siguientes pasos:
+\begin{enumerate}
+    \item Definir los nodos de la red. Estos pueden ser definidos como los electrodos en un estudio de electroencefalograma o regiones anatómicamente definidas de datos de MRI.
+    \item Estimar una medida contínua de asociación entre los nodos. Un ejemplo sería el coeficiente de correlación entre las fluctuaciones de la señal BOLD en una corrida de fMRI.
+    \item Generar una matriz de asociación compilando todas las asociaciones entre pares de los nodos.
+    \item Calcular los parámetros de redes de interés en este modelo gráfico de red cerebral y compararlos entre grupos o contra parámetros equivalentes en una población de redes aleatorias.
+\end{enumerate}
+
+Una red es definida en teoría de grafos como un conjunto de nodos o vértices y \textit{edges} o aristas entre estos. La topología del grafo puede ser cuantitativamente descrita por una amplia variedad de métricas, no obstante, aun no es definido cuáles son las métricas más apropiadas para el análisis de redes cerebrales (Bullmore & Sporns).
+
+Grado de conectividad, distribución de grado y asortatividad; El número de conexiones que enlazan un nodo con el resto de la red es definido como el grado \textemdash{}esta es la medida de red más fundamental y de la cuál últimamente el resto de las medidas se derivan. Los grados de todos los nodos de la red forman la distribución de grado. En redes aleatorias todas las conexiones son igualmente probables, resultando en una distribución Gaussiana y simétricamente centrada. Las redes complejas, como las redes de conectividad funcional, tienden a tener distribuciones de grado no-Gaussianas, frecuentemente con una cola alargada hacia altos grados de conectividad. Bullmore & sporns.
+
+Coeficiente de agrupamiento (o \textit{clustering}); Si los nodos vecinos más cercanos a un nodo están también conectados entre sí, los tres forman un \textit{cluster}. El coeficiente de agrupamiento cuantifica este número de conexiones que existen entre los vecinos más cercanos de un nodo como una proporción del máximo número posible de conexiones.
+
+Largo de camino y eficiencia; El largo de camino es el número más corto de aristas que deben ser recorridas para ir de un nodo a otro. La eficiencia es inversamente relativa al largo de camino pero es numéricamente más sencilla de usar para estimar distancia topológicas entre elementos de grafos desconectados.
+
+Densidad de conexión o costo; La densidad de conexión es el numero actual de aristas en el grafo como una proporción del número total de posibles conexiones y es el estimador más simple del costo físico \textemdash{}por ejemplo el requerimento de energía o cualquier otro recurso físico\textemdash{}de una red.
+
+Los hubs son nodos con alto grado de conectividad o alta centralidad. La centralidad de un nodo mide cuántos largos de camino más cortos entre los nodos de la red pasan a través de él. Un nodo con alto grado de centralidad es entonces crucial para una comunicación eficiente.
+
+Muchos trastornos neurológicos y psiquiátricos pueden ser descritos como síndromes de disconectividad; la emergencia de síntomas o deficiencia funcional de estos trastornos puede estar relacionada con la disrupción o integración anormal de regiones cerebrales spacialmente distribuidas que normalmente constituirían una red a gran escala. Una aplicación de la teoría de redes complejas, en este caso, sería el proveer nuevas medidas para cuantificar las diferencias entre grupos de pacientes y grupos de comparación apropiados (Bullmore & Sporns).
+
+
+
+
+
+
+
+
+
+
+
+La topología de pequeño mundo de las redes funcionales del cerebro se preserva entre las múltiples bandas de frecuencia y tareas conductuales (Sporns & Honey).
+
+La combinación de \textit{clustering} local e interacción global proveen un sustrato estructural para la coexistencia de segregación e integración funcional en el cerebro, un sello distintivo de la complejidad de la red cerebral (Tononti y sporns & tononi) (Sporns y honey). La necesidad de la red para satisfacer simultaneamente las demandas opuestas del procesamiento global y local, de la misma forma que tienden a minimizar el número de pasos necesarios de procesamiento (Sporns & Honey). Las redes cerebrales preservan las caracteristicas topologicas globales (manteniendo continuamente el balance de eficiencia global y local) al mismo tiempo que adaptan flexiblemente la topología necesaria para satisfacer las demandas de la tarea cambiante.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 La teoría de grafos es un nuevo enfoque que ha venido tomando fuerza en el campo de la neuroimagen como una forma de describir comprensivamente la red de elementos y conexiones que forman el cerebro humano.
 Un grafo es una representación de una red. Consiste en un conjunto de vértices o nodos y un conjunto de \textit{edges} o aristas. La presencia de una arista entre dos vértices indica la presencia de algún tipo de interacción o conexión \parencite{Stam2007}.
 Tanto redes estructurales como funcionales pueden ser exploradas usando teoría de grafos; las métricas de la red pueden ser computadas para extraer las características de la topología del grafo.
