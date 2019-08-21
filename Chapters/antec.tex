@@ -101,20 +101,20 @@ Por su parte, el equipo de \textcite{Rapinesi2016} utilizando la misma técnica 
 No obstante, hubo un empeoramiento en los niveles de \textit{craving} después de la cuarta semana, aunque estos se mantuvieron por debajo de los niveles basales.
 
 \section{Imagenología por resonancia magnética}
-A pesar de que la imagenología radioisotópica (PET) ha sido altamente significativa en el descubrimiento y mapeo del rol de la dopamina en la adicción, la imagenología por resonancia magnética (IRM) es el pilar de la investigación con neuroimagen en la adicción, debido a su seguridad, ausencia de radioactividad y flexibilidad en la información obtenida \parencite{Suckling2017}. \par
-La IRM puede ofrecer información tanto anatómica \textemdash{}relacionada a la estructura de la materia gris y blanca\textemdash{} como funcional \textemdash{}relacionada a la actividad cerebral.
+A pesar de que la imagenología radioisotópica (PET) ha sido altamente significativa en el descubrimiento y mapeo del rol de la dopamina en la adicción, la imagenología por resonancia magnética (MRI) es el pilar de la investigación con neuroimagen en la adicción, debido a su seguridad, ausencia de radioactividad y flexibilidad en la información obtenida \parencite{Suckling2017}. \par
+La MRI puede ofrecer información tanto anatómica \textemdash{}relacionada a la estructura de la materia gris y blanca\textemdash{} como funcional \textemdash{}relacionada a la actividad cerebral.
 
 \subsection{Resonancia magnética funcional}
-La resonancia magnética funcional (IRMf) es una técnica de neuroimagen que mide la actividad cerebral por medio del contraste endógeno del nivel dependiente de oxigenación de sangre (BOLD) \parencite{Ogawa1993}, utilizando las distintas propiedades magnéticas de la sangre oxigenada y deoxigenada.
+La resonancia magnética funcional (fMRI) es una técnica de neuroimagen que mide la actividad cerebral por medio del contraste endógeno del nivel dependiente de oxigenación de sangre (BOLD) \parencite{Ogawa1993}, utilizando las distintas propiedades magnéticas de la sangre oxigenada y deoxigenada.
 Partiendo de que la actividad neuronal requiere oxígeno, la señal BOLD está indirectamente relacionada con el procesamiento funcional local.
-Los experimentos de IRMf, entonces, frecuentemente inducen procesos cognitivos específicos con los estímulos apropiados, con la intención de observar las regiones y circuitos involucrados. \par
-Mucho de lo que actualmente se conoce sobre función cerebral ha venido de estudios que miden los cambios en actividad neuronal y conducta después de la administración de una tarea o estímulo (\textit{task-based fMRI}, o IRMf de tarea), sin embargo, cambios espontáneos de la señal BOLD que no son atribuidos a un diseño experimental también están presentes \parencite{Fox2007}.
-Es así como la resonancia magnética funcional en estado de reposo (\textit{resting-state fMRI}, o IRMf en reposo) ha emergido recientemente como una poderosa herramienta que permite medir la conectividad funcional \parencite{Biswal2010}.\par
+Los experimentos de fMRI, entonces, frecuentemente inducen procesos cognitivos específicos con los estímulos apropiados, con la intención de observar las regiones y circuitos involucrados. \par
+Mucho de lo que actualmente se conoce sobre función cerebral ha venido de estudios que miden los cambios en actividad neuronal y conducta después de la administración de una tarea o estímulo (\textit{task-based fMRI}, o fMRI de tarea), sin embargo, cambios espontáneos de la señal BOLD que no son atribuidos a un diseño experimental también están presentes \parencite{Fox2007}.
+Es así como la resonancia magnética funcional en estado de reposo (\textit{resting-state fMRI}, o fMRI en reposo) ha emergido recientemente como una poderosa herramienta que permite medir la conectividad funcional \parencite{Biswal2010}.\par
 La resonancia funcional durante el reposo revela fluctuaciones espontáneas de gran amplitud y baja frecuencia (\deactivatequoting\SI{< 0.1}{\hertz}\activatequoting) que pueden ser temporalmente correlacionadas entre áreas relacionadas funcionalmente.
 Un único escaneo (de al menos 5 minutos) puede ser usado para estudiar una multitud de circuitos funcionales simultáneamente \parencite{Biswal2010}.
 
 \subsection{Resonancia magnética funcional en adicción}
-Las investigaciones de neuroimagen sobre la neurobiología de las adicciones han sido en su mayoría realizadas por técnicas como la tomografía por emisión de positrones (PET) o la IRMf por medio de tareas, donde muchas de estas tareas tienen que ver con la presentación de señales o impulsos relacionados con la sustancia \parencite{Jasinska2014}.
+Las investigaciones de neuroimagen sobre la neurobiología de las adicciones han sido en su mayoría realizadas por técnicas como la tomografía por emisión de positrones (PET) o la fMRI por medio de tareas, donde muchas de estas tareas tienen que ver con la presentación de señales o impulsos relacionados con la sustancia \parencite{Jasinska2014}.
 Como se mencionó en la sección \ref{intox}, es común en muchos de los comportamintos adictivos la reacción ante estímulos relacionados con el consumo, induciendo \textit{craving} como consecuencia de un condicionamiento Pavloviano. Revisando la literatura, \textcite{Suckling2017} encontraron que en los sujetos adictos hay un incremento en la activación en regiones prefrontales y orbitofrontales y que las regiones con una reactividad a estímulos relacionados al consumo convergían a la corteza del cíngulo anterior, amígdala y estriado ventral en sujetos adictos a la nicotina, alcohol y cocaína. \par
 El control inhibitorio es la supreción de acciones pre-potentes y la resistencia a interferencia de estímulos externos para emplear comportamientos dirigidos a metas.
 En individuos con adicción a cocaína se observó actividad incrementada en las cortezas cingulada y prefrontal, regiones frontales inferiores y cerebelo durante la inhibición de respuesta, independientemente de si la acción fue inhibida con exito o no \parencite{Suckling2017}.
@@ -157,17 +157,17 @@ Una red es una representación matemática de un sistema complejo del mundo real
 Las redes estructurales o funcionales del cerebro pueden ser estudiadas por medio de la teoría de grafos siguiendo los siguientes pasos:
 \begin{enumerate}
     \item Definir los nodos de la red.
-        Estos pueden ser definidos como los electrodos en un estudio de electroencefalograma o regiones anatómicamente definidas de datos de IRM.
+        Estos pueden ser definidos como los electrodos en un estudio de electroencefalograma o regiones anatómicamente definidas de datos de MRI.
         Idealmente deberían representar regiones cerebrales con patrones coherentes de conexiones anatómicas o funcionales.
         Las parcelaciones utilizadas deben cubrir completamente la superficie de la corteza o el cerebro entero y nodos individuales no deben traslaparse espacialmente.
     \item Calcular las aristas estimando una medida contínua de asociación entre los nodos.
-        Esta medida puede tener bases funcionales, como el coeficiente de correlación entre las fluctuaciones de la señal BOLD en una corrida de IRMf, o anatómicas, como la probabilidad de la presencia de tractos de sustancia blanca calculada por medio de IRM de difusión.
+        Esta medida puede tener bases funcionales, como el coeficiente de correlación entre las fluctuaciones de la señal BOLD en una corrida de fMRI, o anatómicas, como la probabilidad de la presencia de tractos de sustancia blanca calculada por medio de MRI de difusión.
     \item Aplicar un umbral.
         Aristas débiles o no significativas pueden representar conexiones espúrias.
         Estas aristas tienden a opacar la topología de conexiones fuertes y significativas por lo que generalmente son descartadas por medio de un umbral absoluto o proporcional.
         Las aristas resultantes pueden ser binarias, representando únicamente la presencia (1) o ausencia de la conexión (0), o ponderadas, si además incluyen información adicional sobre la magnitud de la conexión.
     \item Generar una matriz de asociación compilando todas las asociaciones entre pares de los nodos.
-        Todas las auto-conexiones o conexiones negativas (en el caso de representaciones gráficas de IRMf, anti-correlaciones de la señal BOLD) actualmente deben ser removidas de las redes antes del análisis\parencite{Rubinov2010}.
+        Todas las auto-conexiones o conexiones negativas (en el caso de representaciones gráficas de fMRI, anti-correlaciones de la señal BOLD) actualmente deben ser removidas de las redes antes del análisis\parencite{Rubinov2010}.
     \item Calcular y analizar la topología de la red.
         Una vez calculados los parámetros de redes de interés en este modelo gráfico de red cerebral, se comparan entre grupos o contra parámetros equivalentes en una población de redes aleatorias.
 \end{enumerate}
