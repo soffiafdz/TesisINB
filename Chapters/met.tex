@@ -4,17 +4,17 @@ La investigación forma parte de un proyceto mayor financiado por CONACYT:
 clave S0008-2015-2-260971, bajo la dirección del doctor Eduardo Garza Villarreal y aprobado por el Comité de Ética del INPFRM (CEI/C/070/2016).
 
 \section{Muestra}
-\begin{figure}[h!]
+Tanto pacientes de la clínica de adicciones del INPFRM como externos que cumplieran con el diagnóstico de dependencia de cocaína (F14.2x) del DSM 5 \parencite{APA2013} fueron reclutados para participar en el ensayo clínico.\par
+XXX sujetos fueron asignados aleatoriamente a los distintos grupos de estimulación (Figura \ref{fig:flow}).
+Un grupo recibió estimulación sobre la corteza prefrontal dorsolateral izquierda y el otro, el protocolo sham de estimulación simulada sobre la misma área.
+Una muestra de sujetos controles sanos pareados por edad, sexo y nivel de educación fue extraída de los datos de un estudio realizado con anterioridad en el INPFRM \parencite{Garza2017}.
+
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{participantFlow}
     \caption{Diagrama de flujo de participantes}
     \label{fig:flow}
 \end{figure}
-
-Tanto pacientes de la clínica de adicciones del INPFRM como externos que cumplieran con el diagnóstico de dependencia de cocaína (F14.2x) del DSM 5 \parencite{APA2013} fueron reclutados para participar en el ensayo clínico.\par
-XXX sujetos fueron asignados aleatoriamente a los distintos grupos de estimulación (Figura \ref{fig:Flow}).
-Un grupo recibió estimulación sobre la corteza prefrontal dorsolateral izquierda y el otro, el protocolo sham de estimulación simulada sobre la misma área.
-Una muestra de sujetos controles sanos pareados por edad, sexo y nivel de educación fue extraída de los datos de un estudio realizado con anterioridad en el INPFRM \parencite{Garza2017}.
 
 \section{Criteros de selección}
 Se siguieron los criterios de selección establecidos en el proyecto principal.
@@ -28,7 +28,7 @@ Todos los participantes debían cumplir con los siguientes criterios para ser re
     \item poseer un nivel de lectura de al menos 6to año de primaria
     \item tener la capacidad de dar un consentimiento informado válido
     \item ser diestro
-    \item tener un índice de masa corporal menor o igual a 30;
+    \item tener un índice de masa corporal menor o igual a 30
     \item para las participantes del sexo femenino y en edad fértil, comprometerse a utilizar una forma médicamente aceptable\footnote{Píldora anticonceptiva, preparación hormonal, DIU o depósito (anillo, inyección, implante) y/o algún método anticonceptivo de barrera (diafragma, esponja, espermicida o condón).} de anticonceptivo y no quedar embarazada durante el estudio.
 \end{enumerate*}
 
@@ -59,21 +59,21 @@ Los criterios para suspender la participación de los sujetos durante el estudio
 \end{enumerate*}
 
 \section{Proceso del estudio}
-\begin{figure}[h]
+El estudio consiste en 4 etapas principales (Figura \ref{fig:txTMS}):
+\begin{enumerate}[start=0,leftmargin=3\parindent,align=left,label=Etapa \arabic*:]
+    \item Filtro de pacientes y etapa basal
+    \item Dos semanas de tratamiento aleatorizado
+    \item[Etapa 1-4:] Dos semanas de tratamiento real (grupo sham)
+    \item Tres meses de tratamiento de mantenimiento
+    \item Seis meses de tratamiento de mantenimiento
+\end{enumerate}
+
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{Des1}
     \caption{Linea de curso del tratamiento clínico de EMTr}
     \label{fig:txTMS}
 \end{figure}
-
-El estudio consiste en 4 etapas principales (Figura \ref{fig:txTMS}):
-\begin{enumerate}[start=0,leftmargin=3\parindent,align=left,label=Etapa \arabic*:]
-    \item Filtro de pacientes y etapa basal;
-    \item Dos semanas de tratamiento aleatorizado;
-    \item[Etapa 1-4:] Dos semanas de tratamiento real (grupo sham);
-    \item Tres meses de tratamiento de mantenimiento.
-    \item Seis meses de tratamiento de mantenimiento.
-\end{enumerate}
 
 \subsubsection{Etapa 0}
 Los participantes fueron reclutados inter- y externamente entre aquellos que estuvieran interesados en un tratamiento para la dependencia a la cocaína.
@@ -170,26 +170,52 @@ La secuencia 3D de alta resolución T1w fue adquirida con los siguientes paráme
 \subsection{Manejo de datos}
 Los datos de imagen fueron extraídos del formato \texttt{DICOM}, transformados a \texttt{NIfTI} y organizados en \texttt{BIDS} \parencite{Gorgolewski2016}.
 La calidad de los datos fue evaluada con \texttt{MRIQC} \parencite{Esteban2017} para evaluar posibles artefactos de señal y/o movimiento. \par
-as imagenes fueron preprocesadas utilizando \texttt{FMRIPREP v1.4.1} \parencite{Esteban2019}, una herramienta basada en \texttt{Nipype} \parencite{Gorgolewski2011}.
+
+\subsection{Preprocesamiento de datos}
+Las imagenes fueron preprocesadas utilizando \texttt{FMRIPREP v1.4.1} \parencite{Esteban2019}, una herramienta basada en \texttt{Nipype} \parencite{Gorgolewski2011}.
 Cada volumen de las imagenes T1w fue corregido por INU (no-uniformidad en intensidad) usando \texttt{N4BiasFieldCorrection v2.1.0} \parencite{Tustison2010} y se les removió el cráneo con \texttt{antsBrainExtraction.sh v2.1.0} (con la plantilla OASIS).
-La normalización espacial a la plantilla ICBM 152 asimétrica no-lineal versión 2009c \parencite{Fonov2009} fue realizada por medio de un registro no-lineal con \texttt{antsRegistration} de \texttt{ANTs v2.1.0} \parencite{Avants2007}, usando versiones sin cráneo tanto del volumen T1w como de la plantilla.
+La normalización espacial a la plantilla ICBM 152 asimétrica no-lineal versión 2009c \parencite{Fonov2009} fue realizada por medio de un registro no-lineal con \texttt{antsRegistration} de \texttt{ANTs v2.1.0} \parencite{Avants2008}, usando versiones sin cráneo tanto del volumen T1w como de la plantilla.
 La segmentación del tejido cerebral del líquido cefaloraquídeo (LCR), sustancia blanca (WM) y gris (GM) fue realizada en la imagen T1w sin cráneo usando \texttt{fast} de \texttt{FSL v.5.0.9} \parencite{Zhang2001}.\par
 Los datos funcionales fueron corregidos en el tiempo de corte usando \texttt{3dTshift} de \texttt{AFNI v16.2.07} \parencite{Cox1996} y corregidos por movimiento con \texttt{mcflirt} (\texttt{FSL v5.0.9} \parencite{Jenkinson2002}.
 Esto fue seguido por un co-registro al volumen T1w correspondiente usando un registro basado-en-límites \parencite{Greve2009} con seis grados de libertad, usando \texttt{bbregister} (\texttt{FreeSurfer v6.0.1}).
+Las transformaciones para corregir movimiento, transformación BOLD-a-T1w y deformación T1w-a-plantilla (MNI) fueron concatenadas y aplicadas en un solo paso usando \texttt{antsApplyTransforms} \texttt{(ANTS v2.1.0)} usando interpolación Lanczos.\par
+Regresores de ruido fisiológicos fuercon extraídos aplicando CompCor \parencite{Behzadi2007}.
+Componentes principales fueron estimados para dos variantes de CompCor: temporal (tCompCor) y anatómica (aCompCor).
+Una máscara para exluir señal con origen cortical fue obtenida erocionando la máscara del cerebro, asegurándose de que solo se contuvieran estructuras subcorticales.
+Seis componentes tCompCor fueron entonces calculados incluyendo solo el top 5\% de voxeles variabbles dentro de la máscara subcortical.
+Para aCompCor, seis componentes fueron calculados en el espacio T1w, después de su proyección al espacio nativo de cada corrida funcional.
+El desplazamiento de marco (FD, \textit{frame-wise displacemente}) \parencite{Power2014} fue calculado para cada corrida funcional usando la implementación de \texttt{Nipype}.\par
+Muchas operaciones internas de \texttt{FMRIPREP} usan \texttt{Nilearn} \parencite{Abraham2014}, principalmente dentro del flujo de trabajo del procesamiento BOLD. Para más detalles del trabajo de preprocesamiento ver \url{https://fmriprep.readthedocs.io/en/latest/workflows.html}.\par
+Una vez obtenidas las matrices de regresiones de ruido de \texttt{FMRIPREP} los datos fueron procesados con la herramienta \texttt{xcpEngine} \parencite{Ciric2017}.
+Debido a la naturaleza clínica de la muestra y las altas tasas de movimiento (medido por FD), utilizamos la estrategia de preprocesamiento de \textcite{Power2014} de 36 parametros de regresión y \textit{scrubbing} (eliminación de los volúmenes que sobrepasen un umbral de FD establecido; en nuestro caso de \SI{0.5}{\milli\meter}).
 
+\subsection{Construcción de redes}
+Por medio de la misma herramiento de procesamiento \texttt{xcpEngine} se extrajeron las lineas de tiempo de la señal BOLD de cada uno de los 264 nodos del atlas funcional de \parencite{Power2011} basado en un meta-análisis de datos de fMRI de tareas. Utilizando \texttt{R v3.5.3} \parencite{R2019} \parencite{Rstudio2018} creamos matrices de  adyacencia obteniendo el coeficiente de correlación de Pearson $r$ de la señal BOLD entre cada una de las áreas de la parcelación.\par
+Posteriormente se aplicó una umbralización de consenso donde se reconstruyen las matrices de adyacencia incluyendo solo las conexiones cuya prevalencia iguala o excede un umbral grupal \parencite{DeReus2013}
+\begin{equation}
+    \label{eqn:threshold}
+    w_{ij}=
+    \begin{cases}
+        w_{ij}, & \text{si}\ w_{ij} \geq \tau \enspace \text{en}\ (\frac{T}{100})m \\
+        0, & \text{de otra forma}
+    \end{cases}
+\end{equation}
+dado un umbral grupal $T$ (expresado como porcentaje) y una muestra de redes cerebrales $m$, una conexión es tomada como presente en la reconstrucción combinada si sobrepasa un umbral de conectividad $\tau$ en al menos $\frac{T}{100}m$ . \par
+Para esta investigación los parámetros utilizados fueron $\tau = 0.5$ y $T = 60\%$ y todas las auto-conexiones y conexiones negativas (anti-correlaciones funcionales) fueron retiradas de las matrices antes del análisis \parencite{Rubinov2010}.
 
+\subsection{Análisis de datos}
+\subsubsection{Medidas topológicas}
+Teniendo las matrices de adyacencia finales, los grafos de la red de conectividad funcional para cada sujeto fueron creados con la paquetería \texttt{brainGraph v2.2} \parencite{Watson2018}. Para cada grafo se extrajeron las siguientes medidas topológicas
+\begin{enumerate*}[label=\emph{\alph*}), before=\unskip{: }, itemjoin={{; }}, itemjoin*={{, y }}]
+    \item grado
+    \item densidad
+    \item coeficiente de agrupamiento
+    \item largo de camino característico
+    \item eficienca local
+    \item eficiencia global
+    \item escalar de pequeño-mundo
+\end{enumerate*}.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\subsubsection{Análisis estadísticos}
+Los análisis estadísticos fueron hechos dentro del entorno de programación para \texttt{R} \texttt{RStudio} \parencite{Rstudio2018}.\par
+Dado a la asignación grupal aleatoria, optamos por no explorar las diferencias demográficas y atribuirlas a efectos aleatorios. Los cambios observados en las mediciones clínicas y en la topología de redes tanto en la fase cerrada como en las distintas etapas longitudinales fueron explorados por medio de modelos de regresión de efectos mixtos, incluyendo edad, sexo y nivel educativo como covariantes.
