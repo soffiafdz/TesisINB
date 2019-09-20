@@ -1,5 +1,5 @@
 \documentclass[12pt, letterpaper, oneside, openany]{book}
-\usepackage[spanish, english, es-nodecimaldot]{babel}
+\usepackage[spanish, english, es-nodecimaldot, es-tabla]{babel}
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc}
 \usepackage{csquotes}
@@ -16,6 +16,11 @@
 \usepackage{siunitx}
 \usepackage[inline]{enumitem}
 \usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{dcolumn}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[section]{placeins}
 % \usepackage{minted}
 
 \graphicspath{ {./Figures/} }
@@ -33,16 +38,16 @@
 \input{Chapters/titlepage}
 
 \pagestyle{empty}
-\input{Chapters/signatures}
-\input{Chapters/dedic}
-\input{Chapters/agrad}
+% \input{Chapters/signatures}
+% \input{Chapters/dedic}
+% \input{Chapters/agrad}
 
 
 \frontmatter
 \pagestyle{plain}
 \chapter*{\center Resumen}
 \addcontentsline{toc}{chapter}{Resumen Español}
-\input{Chapters/absSp}
+% \input{Chapters/absSp}
 
 \chapter*{\center Abstract}
 \addcontentsline{toc}{chapter}{Resumen Inglés}
@@ -56,15 +61,20 @@
 
 \chapter{Introducción}
 \input{Chapters/intro}
+% lines11--13
 
 \chapter{Antecedentes}
 \input{Chapters/antec}
+% lines81--81
 
 \chapter{Planteamiento del problema}
 \input{Chapters/pprob}
 
 \chapter{Sujetos, material y métodos}
 \input{Chapters/met}
+
+\chapter{Resultados}
+\input{Chapters/res}
 
 \backmatter
 \addcontentsline{toc}{chapter}{\bibname}

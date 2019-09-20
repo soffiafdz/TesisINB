@@ -13,6 +13,8 @@ La organización del directorio es la siguiente:
 │   ├── (...)
 ├── Notes
 │   └── (...)
+├── Paper
+│   └── (...)
 ├── Draft.pdf
 ├── Thesis.bib -> ...
 ├── masterThesis.pdf
@@ -28,8 +30,11 @@ tesis.
 En este directorio están todas las figuras base (drawio) y finales (.png) para
 ser introducidas en el documento.
 
-#### Notas
+#### Notes
 Notas miscelaneas utilizadas para la redacción.
+
+#### Paper
+Traducción e implementación de la tesis para un artículo arbitrado.
 
 #### Draft.pdf
 Versión preliminar de la tesis hecha en Word; esta fue utilizada como guía

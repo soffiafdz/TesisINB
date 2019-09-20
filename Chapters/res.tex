@@ -1,0 +1,775 @@
+\section{Exploración con sujetos controles}
+\subsection{Demográficos}
+
+En la tabla \ref{tab:demHC} se muestran las medidas demográficas de los pacientes dependientes a cocaína y la submuestra independiente de controles sanos.
+No hubo diferencia significativa en la edad ni nivel educativo; los sujetos con dependencia fueron significativamente mayores y con una mayor proporción de fumadores que los controles sanos.
+
+\begin{table}[hbp]
+    \centering
+    \small
+    \caption{Datos demográficos entre pacientes adictos y controles sanos}
+    \label{tab:demHC}
+    \begin{tabular}{lccc}
+        \hline
+        & Adictos & Controles & \multirow{2}{*}{p}\\
+        & (N=46) & (N=45) & \\
+        \hline
+        Sexo            &  &  & 0.737\\
+        - M           & 40 (87.0\%) & 37 (82.2\%) & \\
+        - F           & 6 (13.0\%) & 8 (17.8\%) & \\
+        Edad            & 34.5 ±  7.9 & 30.5 ±  7.5 & 0.016\\
+        Educación       & 13.1 ±  3.0 & 12.8 ±  3.5 & 0.747\\
+        Fumar           &  &  & 0.002\\
+        - No          & 10 (22.2\%) & 25 (56.8\%) & \\
+        - Sí          & 35 (77.8\%) & 19 (43.2\%) & \\
+        Cigarrillos al día &  6.6 ± 10.5 &  0.5 ±  0.8 & 0.000\\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Topología de red}
+Se exploraron las medidas topológicas a lo largo de los distintos umbrales.
+Para esta comparación se reportan los resultados hasta $\tau = 0.35$, ya que posterior a este las redes de los sujetos controles comienzan a mostrar desconexión.\par
+Los pacientes adictos mostraron un mayor número de conexiones y mayor fuerza en las mismas en comparación con redes de sujetos controles
+bajo el mismo umbral (Fig \ref{fig:dsHC}).
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{dens_str_VS.png}
+    \caption{Densidad y Fuerza de redes de pacientes adictos y controles sanos bajo los distintos umbrales}
+    \label{fig:dsHC}
+\end{figure}
+
+De manera similar, los pacientes adictos muestran, a su vez, una mayor eficiencia tanto a nivel local como a nivel global que sus pares controles en todos los umbrales explorados (Fig \ref{fig:effHC}).
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{effs_VS.png}
+    \caption{Eficiencia local y global de redes de pacientes adictos y controles sanos bajo distintos umbrales}
+    \label{fig:effHC}
+\end{figure}
+
+No obstante, los pacientes adictos obtuvieron una menor métrica de pequeño mundo.
+En los umbrales más permisivos la diferencia es mínima, pero conforme disminuye la densidad de la red, la cualidad de pequeño mundo de las redes de controles sanos aumenta en mayor medida que la de los pacientes dependientes (Fig \ref{fig:sigmaHC}).
+
+\begin{figure}[!ht]
+    \centering
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{sigma1_VS.png}
+        \caption{Umbrales bajos}
+        \label{fig:sigma1}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{sigma2_VS.png}
+        \caption{Umbrales altos}
+        \label{fig:sigma2}
+    \end{subfigure}
+    \caption{Largo de camino, coeficiente de agrupamiento y métrica de pequeño mundo en redes de pacientes adictos y controles bajo distintos umbrales}
+    \label{fig:sigmaHC}
+\end{figure}
+
+Tomando un valor de $\tau$ intermedio de 0.25, en la Tabla \ref{tab:lmHC} se enlistan las regresiones lineares multivariadas de las distintas métricas de grafo comparando las redes de los pacientes dependientes contra aquellas de controles sanos y tomando edad, sexo y nivel educativo como covariables. Grupo experimental fue un predictor significativo para todas las variables dependientes; aunque sexo y educación aparecen como buenos predictores (fuerza y densidad, respectivamente), su significancia no sobrevive la corrección a múltiples comparaciones.
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Sep 16, 2019 - 09:43:43 PM
+\begin{table}[H] \centering
+  \caption{Regresiones lineales multivariadas de la topología de red con sexo, edad y educación como covariantes}
+  \label{tab:lmHC}
+  \small
+\begin{tabular}{@{\extracolsep{5pt}}lccccc}
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+ & \multicolumn{5}{c}{Variables dependientes} \\
+\cline{2-6}
+\\[-1.8ex] & Densidad & Fuerza & E.Global & E.Local & P.Mundo \\
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5)\\
+\hline \\[-1.8ex]
+ Grupo(HC) & $-$0.007$^{***}$ & $-$0.626$^{***}$ & $-$0.051$^{***}$ & $-$0.126$^{***}$ & 17.766$^{***}$ \\
+  & (0.0002) & (0.036) & (0.002) & (0.005) & (1.094) \\
+  Sexo(F) & $-$0.0004$^{*}$ & $-$0.113$^{**}$ & $-$0.001 & $-$0.009 & $-$0.485 \\
+  & (0.0002) & (0.049) & (0.002) & (0.006) & (1.479) \\
+  Edad & $-$0.00000 & $-$0.003 & $-$0.0001 & $-$0.0001 & 0.091 \\
+  & (0.00001) & (0.002) & (0.0001) & (0.0003) & (0.071) \\
+  Educación & 0.0001$^{**}$ & 0.010$^{*}$ & 0.0003 & 0.001$^{*}$ & $-$0.300$^{*}$ \\
+  & (0.00003) & (0.005) & (0.0002) & (0.001) & (0.166) \\
+  Constant & 0.011$^{***}$ & 1.009$^{***}$ & 0.063$^{***}$ & 0.234$^{***}$ & 3.914 \\
+  & (0.0005) & (0.100) & (0.004) & (0.013) & (3.039) \\
+ \hline \\[-1.8ex]
+Observaciones & 91 & 91 & 91 & 91 & 91 \\
+R$^{2}$ & 0.953 & 0.794 & 0.927 & 0.898 & 0.764 \\
+Adjusted R$^{2}$ & 0.950 & 0.784 & 0.924 & 0.893 & 0.753 \\
+SE Residual (df = 86) & 0.001 & 0.166 & 0.007 & 0.022 & 5.033 \\
+F (df = 4; 86) & 432.703$^{***}$ & 82.777$^{***}$ & 273.509$^{***}$ & 188.366$^{***}$ & 69.479$^{***}$ \\
+\hline
+\hline \\[-1.8ex]
+\textit{Nota:}  & \multicolumn{5}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+\end{tabular}
+\end{table}
+
+\section{Fase cerrada (Doble-ciego)}
+\subsection{Clínica}
+
+\begin{table}[!ht]
+    \small
+    \caption{Medidas demográficas y clínicas de la fase cerrada}
+    \label{tab:demT}
+    \centering
+    \begin{tabular}{lccccc}
+        \hline
+ & \multicolumn{2}{c}{Pre}  &  &\multicolumn{2}{c}{Post} \\
+ \cline{2-4}\cline{5-6}
+ & Sham & Real & & Sham & Real\\
+ & (N=18) & (N=22) &  & (N=18) & (N=22) \\
+ \hline
+        Sexo            &  &  & &  &  \\
+        - M           & 16 (88.89\%) & 19 (86.36\%) &  & 16 (88.89\%) & 19 (86.36\%) \\
+        - F           & 2 (11.11\%) & 3 (13.64\%) &  & 2 (11.11\%) & 3 (13.64\%) \\
+        Edad            & 33.11 ± 9.13 & 35.32 ± 7.13  &  & 33.11 ± 9.13 & 35.32 ± 7.13 \\
+        Educación       & 12.92 ± 2.78 & 13.18 ± 3.08  &  & 12.92 ± 2.78 & 13.18 ± 3.08 \\
+        Años de consumo    & 10.19 ± 8.27 & 11.59 ± 8.15  &  & 10.19 ± 8.27 & 11.59 ± 8.15 \\
+        Tabaco          &  &   &  &  &   \\
+        - No          & 3 (16.67\%) & 6 (27.27\%)  &  & 3 (16.67\%) & 6 (27.27\%)  \\
+        - Sí          & 15 (83.33\%) & 16 (72.73\%)  &  & 15 (83.33\%) & 16 (72.73\%) \\
+        Cigarrillos al día & 4.36 ± 4.23 & 8.70 ± 13.85  &  & 4.36 ± 4.23 & 8.70 ± 13.85 \\
+        \hline
+        VAS             & 2.65 ± 2.98 & 4.07 ± 3.72 &  & 2.35 ± 2.55 & 1.54 ± 2.48 \\
+        CCQG            & 199.11 ± 43.70 & 190.64 ± 48.44  &  & 159.56 ± 52.81 & 147.05 ± 49.08 \\
+        CCQN            & 142.17 ± 48.99 & 149.09 ± 48.58  &  & 134.00 ± 46.12 & 116.55 ± 47.47  \\
+        BIS11           & 60.44 ± 16.66 & 64.86 ± 17.62 &  & 61.78 ± 20.39 & 53.32 ± 18.14 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+En la tabla \ref{tab:demT} se enlistan las variables demográficas y clínicas estratificadas por grupo y por etapa experimental.\par
+Como se observa en la figura \ref{fig:corrT}, las mediciones de \textit{craving} estuvieron correlacionadas antes y después  del tratamiento experimental. Por su parte, la medición de impulsividad no estuvo relacionada con las mediciones de \textit{craving} en la fase basal (Fig \ref{fig:corrA}), pero sí en la fase post-tratamiento (Fig \ref{fig:corrB}).
+
+\begin{figure}[!htb]
+    \centering
+    \begin{subfigure}[t]{0.40\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{corr1.png}
+        \caption{Fase Pre-tratamiento}
+        \label{fig:corrA}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{corr2.png}
+        \caption{Fase Post-tratamiento}
+        \label{fig:corrB}
+    \end{subfigure}
+    \caption{Correlación entre las medidas clínicas exploradas en la fase cerrada}
+    \label{fig:corrT}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \begin{subfigure}[t]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{vasT.png}
+        \caption{VAS}
+        \label{fig:cl1VAS}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{ccqgT.png}
+        \caption{CCQ-G}
+        \label{fig:cl1CG}
+    \end{subfigure}
+    \vskip\baselineskip
+    \begin{subfigure}[t]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{ccqnT.png}
+        \caption{CCQ-N}
+        \label{fig:cl1CN}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{b11T.png}
+        \caption{BIS-11}
+        \label{fig:cl1B11}
+    \end{subfigure}
+    \caption{Puntajes de mediciones clínicas separados por mediana grupal y divididos entre grupos experimentales}
+    \label{fig:clin1}
+\end{figure}
+
+En las distintas mediciones clínicas se pudo observar un patrón de cambio distinto en los sujetos que mostraban un puntaje basal alto o bajo (separado por la mediana) (Fig \ref{fig:clin1}). Mientras que todos los sujetos que comenzaban con un puntaje alto demostraban una disminución en su puntaje a las dos semanas de tratamiento independientemente del grupo experimental (con excepción de la escala de impulsividad de Barratt, donde el grupo de estimulación sham se mantuvo constante; Fig \ref{fig:cl1B11}), las diferencias entre los grupos de estimulación, cuando hubo, se encontraron principalmente en aquellos sujetos que tuvieron un puntaje basal bajo. \par
+En la escala visual análoga, los sujetos de puntaje basal bajo que llevaron estimulación sham expresaron un aumento en el nivel de \textit{craving}, a diferencia de quienes llevaron estimulación real (Fig \ref{fig:cl1VAS}) De igual forma, pero en menor medida, ocurrió lo mismo con las escalas de CCQ-N (Fig \ref{fig:cl1CN}) y de impulsividad de Barratt (Fig \ref{fig:cl1B11}). En la escala de CCQ-G no hubo diferencia entre grupo experimental ni de puntaje. \par
+
+Debido a estas diferencias, se pretendió predecir los puntajes clínicos post-tratamiento utilizando el grupo de tratamiento y los puntajes basales como covariantes\footnote{Debido a la correlación de variables de \textit{craving} basales, para evitar colinearidad solo se introdujo la misma variable basal como covariante para cada modelo}. En la tabla \ref{tab:lmCl1} se muestran los coeficientes y parámetros de los modelos. \par
+En todos los modelos, el puntaje basal de la misma escala fue un predictor significativo. El grupo experimental fue un predictor significativo en los modelos clínicos de \textit{craving} por medio de la escala visual análoga ($p<0.05$) y de impulsividad ($p<0.01$) controlando por el puntaje basal tanto de \textit{craving} como de impulsividad en ambos modelos.
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. Ebel{}
+% Date and time: Tue, Sep 17, 2019 - 12:57:16 AM
+\begin{table}[!ht] \centering
+  \caption{Regresiones lineales multivariadas de mediciones clínicas con grupo de tratamiento como predictor y mediciones basales como covariantes}
+  \label{tab:lmCl1}
+\begin{tabular}{@{\extracolsep{5pt}}lcccc}
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+ & \multicolumn{4}{c}{Mediciones clínicas (Post-tratamiento)} \\
+\cline{2-5}
+\\[-1.8ex] & VAS & CCQ-G & CCQ-N & BIS-11 \\
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\
+\hline \\[-1.8ex]
+ Grupo(Real) & $-$1.529$^{**}$ & $-$11.915 & $-$23.553$^{*}$ & $-$11.335$^{**}$ \\
+  & (0.667) & (13.587) & (12.088) & (4.242) \\
+  VAS & 0.382$^{***}$ &  &  & $-$0.467 \\
+  & (0.098) &  &  & (0.806) \\
+  CCQ-G &  & 0.567$^{***}$ &  & 0.003 \\
+  &  & (0.148) &  & (0.062) \\
+  CCQ-N &  &  & 0.536$^{***}$ & $-$0.044 \\
+  &  &  & (0.127) & (0.072) \\
+  B11 & 0.039$^{*}$ & 0.953$^{**}$ & 0.540 & 0.876$^{***}$ \\
+  & (0.019) & (0.400) & (0.361) & (0.127) \\
+  Constant & $-$1.014 & $-$11.005 & 25.146 & 15.610 \\
+  & (1.265) & (40.936) & (27.318) & (12.764) \\
+ \hline \\[-1.8ex]
+Observaciones & 40 & 40 & 40 & 40 \\
+R$^{2}$ & 0.391 & 0.355 & 0.409 & 0.619 \\
+R$^{2}$ ajustada & 0.341 & 0.301 & 0.360 & 0.563 \\
+SE Residual & 2.042  & 42.247  & 37.664  & 12.827  \\
+            & (df = 36) &(df = 36)&(df = 36)&(df = 34) \\
+Estadístico F & 7.714$^{***}$  & 6.592$^{***}$  & 8.321$^{***}$  & 11.048$^{***}$  \\
+              &(df = 3; 36)&(df = 3; 36)&(df = 3; 36)&(df = 5; 34)\\
+\hline
+\hline \\[-1.8ex]
+\textit{Nota:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+\end{tabular}
+\end{table}
+
+\subsection{Topología de redes}
+Tomando la medida de $\tau = 0.25$ exploramos los cambios en la topología de las redes de los distintos grupos experimentales antes y después de las dos semanas de estimulación magnética.\par
+Como se observa en la figura \ref{fig:gpT1}, mientras que los sujetos que llevaron dos semanas de estimulación sham obtuvieron un ligero incremento en la densidad y fuerza de sus conexiones; aquellos que llevaron un tratamiento real mostraron una importante disminución en estas mismas métricas. La interacción entre el grupo de estimulación y la fase de estudio resulta ser un predictor significativo tanto para la medida de densidad como de fuerza (tabla \ref{tab:memT1} (1) y (2)).\par
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{gphT1.png}
+    \caption{Densidad y fuerza de redes de pacientes adictos antes y después de dos semansa de EMTr}
+    \label{fig:gpT1}
+\end{figure}
+
+De forma similar, a las dos semanas de tratamiento encontramos una reducción en las métricas de eficiencia (Fig \ref{fig:gpT2}); mientras que la reducción en la eficiencia local ocurrió tanto en aquellos sujetos que llevaron estimulación real como en quienes llevaron sham, la eficiencia global disminuyó únicamente en aquellos sujetos cuyo tratamiento fue real, lo que fue confirmado en el modelo de efectos mixtos, en donde la interacción del grupo experimental y la fase de tratamiento fue un predictor significativo únicamente para la modalidad global de eficiencia y no la local (tabla \ref{tab:memT2} (2) y (3)).\par
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{gphT2.png}
+    \caption{Eficiencia global y local de redes de pacientes adictos antes y después de dos semansa de EMTr}
+    \label{fig:gpT2}
+\end{figure}
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, Sep 17, 2019 - 03:17:17 AM
+\begin{table}[!t] \centering
+  \caption{Modelos de efectos mixtos de topología de red en fase cerrada de tratamiento con sexo, edad y educación como covariantes}
+  \label{tab:memT1}
+\begin{tabular}{@{\extracolsep{5pt}}lcccc}
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+ & \multicolumn{4}{c}{Variables dependientes} \\
+\cline{2-5}
+\\[-1.8ex] & Densidad & Fuerza & E.Local & E.Global \\
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\
+\hline \\[-1.8ex]
+ Fase(Post-) & 0.0003 & 0.049 & $-$0.023$^{***}$ & $-$0.002 \\
+  & (0.0002) & (0.051) & (0.005) & (0.002) \\
+  Grupo(Real) & 0.004$^{***}$ & 0.373$^{***}$ & 0.036$^{***}$ & 0.034$^{***}$ \\
+  & (0.0004) & (0.094) & (0.009) & (0.004) \\
+  VAS & $-$0.00004 & $-$0.005 & $-$0.001 & $-$0.0003 \\
+  & (0.00005) & (0.010) & (0.001) & (0.0005) \\
+  B11 & $-$0.00001 & 0.0005 & 0.00003 & $-$0.0001 \\
+  & (0.00001) & (0.002) & (0.0002) & (0.0001) \\
+  Sexo(F) & 0.0001 & $-$0.081 & $-$0.0004 & $-$0.002 \\
+  & (0.001) & (0.130) & (0.013) & (0.005) \\
+  Edad & $-$0.00003 & $-$0.005 & $-$0.0001 & $-$0.0001 \\
+  & (0.00003) & (0.006) & (0.001) & (0.0002) \\
+  Educación & 0.0001 & 0.017 & 0.001 & 0.001 \\
+  & (0.0001) & (0.016) & (0.002) & (0.001) \\
+  Fase:Grupo & $-$0.004$^{***}$ & $-$0.347$^{***}$ & $-$0.002 & $-$0.042$^{***}$ \\
+  & (0.0003) & (0.075) & (0.008) & (0.003) \\
+  Constante & 0.014$^{***}$ & 1.149$^{***}$ & 0.280$^{***}$ & 0.115$^{***}$ \\
+  & (0.001) & (0.289) & (0.029) & (0.012) \\
+ \hline \\[-1.8ex]
+Observaciones & 80 & 80 & 80 & 80 \\
+Crit. I. Akaike & $-$704.206 & 62.957 & $-$260.588 & $-$380.011 \\
+Crit. I. Bayesiano & $-$678.003 & 89.159 & $-$234.386 & $-$353.809 \\
+\hline
+\hline \\[-1.8ex]
+\textit{Nota:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+\end{tabular}
+\end{table}
+
+Al evaluar la eficiencia de forma global y en comparación con redes aleatorias equivalentes, encontramos una interacción significativa entre el grupo experimental y la fase de tratamiento para la escalar de pequeño mundo y largo de camino característico, una de las dos medidas de donde esta se deriva (tabla \ref{tab:memT2}). \par
+El largo de camino característico aumentó en mayor medida en los participantes del grupo de estimulación real que los del grupo placebo. El coeficiente de agrupamiento de también mayor en este grupo, mientras que los participantes que recibieron estimulación sham mostraron una ligera disminución en esta medida, sin embargo, esta diferencia no resultó significativa en el modelo explorado (tabla \ref{tab:memT2} (2)). \par
+En los participantes cuyas dos semanas de tratamiento consistió en estimulación real notamos un incremento en la métrica de pequeño mundo comparada con la calculada a partir de sus redes en la etapa basal, al contrario que en aquellos participantes donde la estimulación fue sham, en quienes esta métrica disminuyó a las dos semanas del tratamiento (Fig \ref{fig:gpT3}).
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{gphT3.png}
+    \caption{Largo de camino, coeficiente de agrupamiento y escalar de pequeño mundo de redes de pacientes adictos antes y después de dos semansa de EMTr}
+    \label{fig:gpT3}
+\end{figure}
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Tue, Sep 17, 2019 - 03:28:16 AM
+\begin{table}[!ht] \centering
+  \caption{Modelos de efectos mixtos de métricas de pequeño mundo en fase cerrada de tratamiento con sexo, edad y educación como covariantes}
+  \label{tab:memT2}
+\begin{tabular}{@{\extracolsep{5pt}}lccc}
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+ & \multicolumn{3}{c}{Variables dependientes} \\
+\cline{2-4}
+\\[-1.8ex] & L.Camino & C.Agrupamiento & P.Mundo \\
+\\[-1.8ex] & (1) & (2) & (3)\\
+\hline \\[-1.8ex]
+ Fase(Post-) & 0.079 & $-$0.010$^{*}$ & $-$1.134$^{***}$ \\
+  & (0.131) & (0.006) & (0.144) \\
+  Grupo(Real) & $-$0.816$^{***}$ & 0.020$^{**}$ & $-$1.075$^{***}$ \\
+  & (0.151) & (0.008) & (0.140) \\
+  VAS & $-$0.022 & $-$0.001 & 0.008 \\
+  & (0.019) & (0.001) & (0.017) \\
+  B11 & 0.003 & 0.0001 & $-$0.002 \\
+  & (0.003) & (0.0002) & (0.003) \\
+  Sexo(F) & $-$0.145 & 0.004 & $-$0.063 \\
+  & (0.181) & (0.011) & (0.149) \\
+  Edad & 0.011 & $-$0.0002 & 0.014$^{**}$ \\
+  & (0.008) & (0.0005) & (0.007) \\
+  Educación & $-$0.031 & 0.001 & 0.003 \\
+  & (0.023) & (0.001) & (0.019) \\
+  Fase:Grupo & 0.935$^{***}$ & 0.012 & 1.804$^{***}$ \\
+  & (0.185) & (0.009) & (0.200) \\
+  Constante & 6.305$^{***}$ & 0.359$^{***}$ & 4.363$^{***}$ \\
+  & (0.442) & (0.025) & (0.375) \\
+ \hline \\[-1.8ex]
+Observaciones & 80 & 80 & 80 \\
+Crit. Inf. Akaike & 155.643 & $-$265.029 & 149.617 \\
+Crit. Inf. Bayesiano & 181.845 & $-$238.827 & 175.819 \\
+\hline
+\hline \\[-1.8ex]
+\textit{Nota:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+\end{tabular}
+\end{table}
+
+\section{Fase abierta (3 meses)}
+\subsection{Clínica}
+En la tabla \ref{tab:cl2} enlistamos las puntuaciones clínicas de los sujetos que completaron los 3 meses de tratamiento real en su etapa basal (T0), a dos semanas de tratamiento real (T1) y 3 meses de sesiones de mantenimiento (T2).
+
+\begin{table}[!ht]
+    \centering
+    \small
+    \caption{Mediciones clínicas longitudinales (3 meses)}
+    \label{tab:cl2}
+\begin{tabular}{lcccc}
+\hline
+ & T0 & T1 & T2 & \multirow{2}{*}{p}\\
+ & (N=16) & (N=16) & (N=16) &  \\
+\hline
+VAS   &  3.8 ±  4.0 &  0.9 ±  2.3 &  0.3 ±  0.8 & 0.001\\
+CCQ-G  & 200.1 ± 43.1 & 135.4 ± 45.4 & 128.6 ± 49.0 & 0.000\\
+CCQ-N  & 156.5 ± 48.5 & 114.6 ± 45.7 & 110.2 ± 29.5 & 0.005\\
+BIS-11 & 67.9 ± 14.8 & 54.1 ± 17.1 & 52.2 ± 17.2 & 0.019\\
+\hline
+\end{tabular}
+\end{table}
+
+\textit{Grosso modo} observamos una mayor mejoría clínica en los participantes con puntuaciones basales más altas después de las dos semanas de tratamiento, que se mantiene independientemente de la situación basal a los tres meses de tratamiento (Fig \ref{fig:clin2}).\par
+Hubo una interacción significativa entre el grupo de puntaje basal y la fase de medición en las mediciones de craving, en donde el grupo con un puntaje basal mayor tuvo una mejoría más importante que el grupo de puntaje bajo (tabla \ref{tab:clin2}); esto fue significativo para las dos semanas en la escala visual análoga ($-$5.05 (1.21), p$<$0.01); y CCQ versión general ($-$61.63 (24.99), p$<$0.05) y a los tres meses de mantenimiento  en las tres mediciones (VAS, $-$6.19 (1.21), p$<$0.01; CCQ-G, $-$70.63 (24.99), p$<$0.01; CCQ-N, $-$44.88 (20.9), p$<$0.05). En cuanto a la medición de impulsividad, el cambio longitudinal controlado por covariantes demográficas y puntaje basal, fue significativo a los tres meses ($-$13.13 (5.62), p$<$0.05) pero no a las dos semanas ($-$9.63 (5.62) p$>$0.05).
+
+\begin{figure}[!hbt]
+    \centering
+    \begin{subfigure}[t]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{clinL1.png}
+        \caption{VAS}
+        \label{fig:cl2VAS}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{clinL2.png}
+        \caption{CCQ-G}
+        \label{fig:cl2CG}
+    \end{subfigure}
+    \vskip\baselineskip
+    \begin{subfigure}[t]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{clinL3.png}
+        \caption{CCQ-N}
+        \label{fig:cl2CN}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{clinL4.png}
+        \caption{BIS-11}
+        \label{fig:cl2B11}
+    \end{subfigure}
+    \caption{Puntajes de mediciones clínicas basales, a dos semanas y tres meses de tratamiento separados por mediana grupal}
+    \label{fig:clin2}
+\end{figure}
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Sep 20, 2019 - 01:04:41 AM
+\begin{table}[!htbp] \centering
+  \caption{Modelos de efectos mixtos de mediciones clínicas longitudinales (a tres meses) con grupo de puntaje basal y medidas demográficas como covariantes}
+  \label{tab:clin2}
+\begin{tabular}{@{\extracolsep{5pt}}lcccc}
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+ & \multicolumn{4}{c}{Mediciones clínicas } \\
+\cline{2-5}
+\\[-1.8ex] & VAS & CCQ-G & CCQ-N & BIS-11\\
+\hline \\[-1.8ex]
+ Fase(T1) & $-$0.450 & $-$33.875$^{*}$ & $-$28.750$^{*}$ & $-$9.625$^{*}$ \\
+  & (0.853) & (17.667) & (14.780) & (5.617) \\
+  Fase(T2) & $-$0.450 & $-$36.250$^{**}$ & $-$23.875 & $-$13.125$^{**}$ \\
+  & (0.853) & (17.667) & (14.780) & (5.617) \\
+  Grupo(Mediana) & 6.648$^{***}$ & 83.286$^{***}$ & 66.292$^{***}$ & 21.010$^{***}$ \\
+  & (0.858) &  (22.555) &(18.198) & (7.120) \\
+  Edad & 0.079$^{**}$ & 1.738 & 1.133 & $-$0.109 \\
+  & (0.037) & (1.145) & (0.993) & (0.396) \\
+  Sexo(F) & $-$1.105$^{*}$ & $-$19.678 & 7.937 & $-$10.465 \\
+  & (0.663) & (19.923) & (17.769) & (6.459) \\
+  Educación & $-$0.145$^{*}$ & $-$2.435 & $-$2.665 & $-$1.075 \\
+  & (0.087) & (2.915) & (2.291) & (0.836) \\
+  FaseT1:GroupMed\textgreater  & $-$5.048$^{***}$ &  $-$61.625$^{**}$  & $-$26.250  & $-$8.250 \\
+  & (1.207) & (24.985) & (20.901) & (7.943) \\
+  FaseT2:GroupMed\textgreater  & $-$6.188$^{***}$ & $-$70.625$^{***}$  & $-$44.875$^{**}$  & $-$5.000 \\
+  & (1.207) & (24.985) & (20.901) & (7.943) \\
+  Constante & $-$0.326 & 129.207$^{**}$ & 114.915$^{**}$ & 77.950$^{***}$ \\
+  & (1.805) & (52.017) & (46.079) & (16.748) \\
+ \hline \\[-1.8ex]
+Observaciones & 48 & 48 & 48 & 48 \\
+Crit. Inf. Akaike & 202.470 & 446.484 & 434.167 & 357.308 \\
+Crit. Inf. Bayesiano & 223.053 & 467.067 & 454.750 & 377.891 \\
+\hline
+\hline \\[-1.8ex]
+\textit{Nota:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+\subsection{Topología de redes}
+Para los analisis longitudinales, se utilizó el mismo nivel de umbral de $\tau$. \par
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{graphL11.png}
+    \caption{Densidad y fuerza de redes de pacientes adictos en fase basal (T0), después de dos semanas tratamiento (T1) y tres meses de mantenimiento (T2)}
+    \label{fig:gpL11}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{graphL12.png}
+    \caption{Eficiencia global y local de redes de pacientes adictos en fase basal (T0), después de dos semanas tratamiento (T1) y tres meses de mantenimiento (T2)}
+    \label{fig:gpL12}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{graphL13.png}
+    \caption{Métricas de pequeño mundo de pacientes adictos en fase basal (T0), después de dos semanas tratamiento (T1) y tres meses de mantenimiento (T2)}
+    \label{fig:gpL13}
+\end{figure}
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Sep 20, 2019 - 03:39:48 AM
+\begin{table}[!htbp] \centering
+  \caption{Modelos de efectos mixtos de topología de red en fase abierta de tratamiento (tres meses) con sexo, edad y educación como covariantes}
+  \label{}
+\begin{tabular}{@{\extracolsep{5pt}}lcccc}
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+ & \multicolumn{4}{c}{Variables dependientes} \\
+\cline{2-5}
+\\[-1.8ex] & Densidad & Fuerza & E.Local & E.Global \\
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\
+\hline \\[-1.8ex]
+ Fase(T1) & $-$0.007$^{***}$ & $-$0.753$^{***}$ & $-$0.038$^{***}$ & $-$0.055$^{***}$ \\
+  & (0.001) & (0.101) & (0.008) & (0.006) \\
+  Fase(T2) & $-$0.007$^{***}$ & $-$0.706$^{***}$ & $-$0.037$^{***}$ & $-$0.056$^{***}$ \\
+  & (0.001) & (0.107) & (0.009) & (0.007) \\
+  VAS & 0.00001 & $-$0.006 & 0.001 & $-$0.0002 \\
+  & (0.0001) & (0.017) & (0.001) & (0.001) \\
+  BIS-11 & $-$0.00001 & $-$0.003 & $-$0.0005 & $-$0.00002 \\
+  & (0.00002) & (0.003) & (0.0003) & (0.0002) \\
+  Sexo(F) & $-$0.001 & $-$0.402$^{**}$ & $-$0.032$^{**}$ & $-$0.006 \\
+  & (0.001) & (0.181) & (0.016) & (0.013) \\
+  Edad & $-$0.0001 & $-$0.007 & 0.001 & $-$0.002$^{**}$ \\
+  & (0.0001) & (0.010) & (0.001) & (0.001) \\
+  Educación & $-$0.0001 & $-$0.019 & $-$0.0005 & $-$0.002 \\
+  & (0.0001) & (0.023) & (0.002) & (0.002) \\
+  Constante & 0.033$^{***}$ & 3.217$^{***}$ & 0.371$^{***}$ & 0.324$^{***}$ \\
+  & (0.003) & (0.511) & (0.044) & (0.035) \\
+ \hline \\[-1.8ex]
+Observations & 48 & 48 & 48 & 48 \\
+Log Likelihood & 179.857 & $-$25.069 & 73.983 & 85.379 \\
+Akaike Inf. Crit. & $-$339.713 & 70.138 & $-$127.965 & $-$150.759 \\
+Bayesian Inf. Crit. & $-$321.001 & 88.850 & $-$109.253 & $-$132.046 \\
+\hline
+\hline \\[-1.8ex]
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+\end{tabular}
+\end{table}
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Sep 20, 2019 - 03:39:49 AM
+\begin{table}[!htbp] \centering
+  \caption{Modelos de efectos mixtos de pequeño mundo en fase abierta de tratamiento (tres meses) con sexo, edad y educación como covariantes}
+  \label{}
+\begin{tabular}{@{\extracolsep{5pt}}lccc}
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+ & \multicolumn{3}{c}{Variables dependientes} \\
+\cline{2-4}
+\\[-1.8ex] & L.Camino & C.Agrupamiento & P.Mundo \\
+\\[-1.8ex] & (1) & (2) & (3)\\
+\hline \\[-1.8ex]
+ Fase(T1) & 0.778$^{***}$ & 0.010 & 1.465$^{***}$ \\
+  & (0.076) & (0.007) & (0.098) \\
+  Fase(T2) & 0.563$^{***}$ & 0.021$^{***}$ & 1.219$^{***}$ \\
+  & (0.081) & (0.008) & (0.105) \\
+  VAS & 0.014 & 0.0005 & 0.004 \\
+  & (0.013) & (0.001) & (0.017) \\
+  BIS-11 & $-$0.003 & $-$0.0004 & $-$0.005 \\
+  & (0.003) & (0.0003) & (0.003) \\
+  Sexo(F) & 0.051 & $-$0.028 & $-$0.295 \\
+  & (0.168) & (0.024) & (0.294) \\
+  Edad & 0.016$^{*}$ & 0.003$^{**}$ & 0.035$^{**}$ \\
+  & (0.009) & (0.001) & (0.016) \\
+  Educación & 0.025 & 0.001 & $-$0.004 \\
+  & (0.022) & (0.003) & (0.038) \\
+  Constante & 3.127$^{***}$ & 0.247$^{***}$ & 3.212$^{***}$ \\
+  & (0.464) & (0.065) & (0.793) \\
+ \hline \\[-1.8ex]
+Observations & 48 & 48 & 48 \\
+Log Likelihood & $-$15.707 & 73.251 & $-$29.335 \\
+Akaike Inf. Crit. & 51.414 & $-$126.502 & 78.670 \\
+Bayesian Inf. Crit. & 70.126 & $-$107.790 & 97.382 \\
+\hline
+\hline \\[-1.8ex]
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+\end{tabular}
+\end{table}
+
+
+
+\section{Fase abierta (6 meses)}
+\subsection{Clínica}
+
+Para explorar los cambios a seis meses de mantenimiento limitamos la muestra solamente los 10 sujetos que completaron todas las fases experimentales, en la tabla \ref{tab:cl3} se reportan los puntajes clínicos para cada medición por fase: basal (T0); tratamiento a dos semanas (T1); mantenimiento a tres (T2) y a seis meses (T3).
+
+\begin{table}[!hbp]
+    \centering
+    \small
+    \caption{Mediciones clínicas longitudinales (6 meses)}
+    \label{tab:cl3}
+\begin{tabular}{lccccc}
+\hline
+ & T0 & T1 & T2 & T3 \\
+ & (N=10) & (N=10) & (N=10) & (N=10)\\
+\hline
+VAS   &  5.1 ±  4.4 &  1.2 ±  2.9 &  0.4 ±  1.1 &  2.8 ±  3.7 \\
+CCQ-G  & 207.6 ± 40.9 & 136.0 ± 56.0 & 117.7 ± 45.8 & 156.9 ± 70.7 \\
+CCQ-N  & 171.5 ± 54.8 & 122.7 ± 54.7 & 112.0 ± 36.8 & 114.6 ± 37.1 \\
+BIS-11 & 72.1 ± 15.2 & 53.3 ± 15.4 & 53.3 ± 13.1 & 56.7 ± 17.8 \\
+\hline
+\end{tabular}
+\end{table}
+
+Al visualizar gráficamente los cambios clínicos longitudinales en estos 10 sujetos, pudimos notar que el puntaje tuvo un ligero aumento en la última medición en contraste con las anteriores en varias de las mediciones, aún manteniendose por debajo del puntaje basal (Fig \ref{fig:clin3}). \par
+En cuanto al \textit{craving}, los modelos de efectos mixtos demuestran una interacción entre la 3ra fase experimental y el grupo de puntaje basal en la escala visual análoga donde los sujetos expresaron un incremento en \textit{craving} comparado a la medición anterior, pero este fue mayor en quienes habían empezado con un nivel basal bajo ($-$8.85, 1.96, p$<$0.01); y la versión \textit{Now} del CCQ, donde los que tenían un \textit{craving} inicial alto siguieron disminuyendo, mientras que los del otro grupo expresaron un aumento en su puntaje ($-$79.32, 30.29, p$<$0.01); la versión General mostró un empeoramiento similar en ambos grupos, por lo que la interacción fue no significativa ($-$53.95, 36.24, p$>$0.05). En la medición de impulsividad encontramos un patrón similar, con una interacción significativa ($-$22.6, 10.1, p$<$0.05), mientras que el grupo de puntaje basal alto se mantuvo en niveles similares a la medición anterior, el grupo de puntaje bajo demostró un incremento en su puntaje de impulsividad, volviendo a niveles similares a los anteriores al tratamiento (tabla \ref{tab:clin3}).
+
+\begin{figure}[!htb]
+    \centering
+    \begin{subfigure}[t]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{clinL21.png}
+        \caption{VAS}
+        \label{fig:cl3VAS}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{clinL22.png}
+        \caption{CCQ-G}
+        \label{fig:cl3CG}
+    \end{subfigure}
+    \vskip\baselineskip
+    \begin{subfigure}[t]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{clinL23.png}
+        \caption{CCQ-N}
+        \label{fig:cl3CN}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.475\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{clinL24.png}
+        \caption{BIS-11}
+        \label{fig:cl3B11}
+    \end{subfigure}
+    \caption{Puntajes de mediciones clínicas basales, a dos semanas, tres y seis meses de tratamiento separados por mediana grupal}
+    \label{fig:clin3}
+\end{figure}
+
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Sep 20, 2019 - 02:25:45 AM
+\begin{table}[!htbp] \centering
+  \caption{Modelos de efectos mixtos de mediciones clínicas longitudinales (a seis meses) con grupo de puntaje basal y medidas demográficas como covariantes}
+  \label{tab:clin3}
+\begin{tabular}{@{\extracolsep{5pt}}lcccc}
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+ & \multicolumn{4}{c}{Mediciones clínicas } \\
+\cline{2-5}
+\\[-1.8ex] & VAS & CCQ-G & CCQ-N & BIS-11\\
+\hline \\[-1.8ex]
+  Fase(T1) & $-$0.720 & $-$44.200$^{*}$ & $-$36.000$^{*}$ & $-$10.800 \\
+  & (1.397) & (25.734) & (21.526) & (7.264) \\
+  Fase(T2) & $-$0.720 & $-$59.600$^{**}$ & $-$33.600 & $-$11.200 \\
+  & (1.397) & (25.734) & (21.526) & (7.264) \\
+  Fase(T3) & 2.900$^{*}$ & $-$17.226 & $-$9.516 & $-$2.800 \\
+  & (1.489) & (27.592) & (23.042) & (7.264) \\
+  Grupo(Mediana) & 7.917$^{***}$ & 102.958$^{***}$ & 81.532$^{***}$ & 21.253$^{**}$ \\
+  & (1.419) & (33.068) & (25.783) & (9.385) \\
+  Edad & 0.111$^{**}$ & 3.324$^{**}$ & 0.814 & $-$0.209 \\
+  & (0.049) & (1.449) & (1.041) & (0.430) \\
+  Sexo(F) & 0.416 & 9.861 & $-$11.068 & $-$6.571 \\
+  & (1.459) & (37.534) & (27.960) & (11.055) \\
+  Educación & $-$0.270$^{*}$ & $-$5.914 & $-$4.444 & $-$1.940$^{*}$ \\
+  & (0.138) & (3.854) & (2.934) & (1.123) \\
+  FaseT1:GrupoMed\textgreater  & $-$5.543$^{***}$ & $-$44.800 & $-$21.167 & $-$10.533 \\
+  & (1.891) & (34.844) & (29.146) & (9.835) \\
+  FaseT2:GrupoMed\textgreater  & $-$6.813$^{***}$ & $-$36.733 & $-$40.900 & $-$13.800 \\
+  & (1.891) & (34.844) & (29.146) & (9.835) \\
+  FaseT3:GrupoMed\textgreater  & $-$8.849$^{***}$ & $-$53.941 & $-$79.318$^{***}$ & $-$22.604$^{**}$ \\
+  & (1.960) & (36.238) & (30.284) & (10.102) \\
+  Constante & $-$0.272 & 96.866 & 151.682$^{***}$ & 93.960$^{***}$ \\
+  & (2.665) & (71.183) & (54.738) & (20.116) \\
+ \hline \\[-1.8ex]
+Observaciones & 43 & 43 & 43 & 43 \\
+Crit. Inf. Akaike & 197.328 & 387.711 & 374.872 & 307.602 \\
+Crit. Inf. Bayesiano & 220.223 & 410.607 & 397.768 & 330.498 \\
+\hline
+\hline \\[-1.8ex]
+\textit{Nota:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+\end{tabular}
+\end{table}
+
+\FloatBarrier
+\subsection{Topología de redes}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.65\textwidth]{graphL21.png}
+    \caption{Densidad y fuerza de redes de pacientes adictos en fase basal (T0), después de dos semanas tratamiento (T1), tres (T2) y seis meses de mantenimiento (T3)}
+    \label{fig:gpL21}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.65\textwidth]{graphL22.png}
+    \caption{Eficiencia global y local de redes de pacientes adictos en fase basal (T0), después de dos semanas tratamiento (T1), tres (T2) y seis meses de mantenimiento (T3)}
+    \label{fig:gpL22}
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{graphL23.png}
+    \caption{Métricas de pequeño mundo de pacientes adictos en fase basal (T0), después de dos semanas tratamiento (T1), tres (T2) y seis meses de mantenimiento (T3)}
+    \label{fig:gpL23}
+\end{figure}
+
+
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Sep 20, 2019 - 04:18:38 AM
+\begin{table}[!htbp] \centering
+  \caption{Modelos de efectos mixtos de topología de red en fase abierta de tratamiento (seis meses) con sexo, edad y educación como covariantes}
+  \label{}
+\begin{tabular}{@{\extracolsep{5pt}}lcccc}
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+ & \multicolumn{4}{c}{Variables dependientes} \\
+\cline{2-5}
+\\[-1.8ex] & Densidad & Fuerza & E.Local & E.Global \\
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\
+\hline \\[-1.8ex]
+ Fase(T1) & $-$0.008$^{***}$ & $-$0.806$^{***}$ & $-$0.022 & $-$0.048$^{***}$ \\
+  & (0.002) & (0.285) & (0.016) & (0.009) \\
+  Fase(T2) & $-$0.007$^{***}$ & $-$0.630$^{**}$ & $-$0.025 & $-$0.053$^{***}$ \\
+  & (0.002) & (0.302) & (0.017) & (0.009) \\
+  Fase(T3) & $-$0.013$^{***}$ & $-$1.145$^{***}$ & $-$0.061$^{***}$ & $-$0.059$^{***}$ \\
+  & (0.002) & (0.268) & (0.015) & (0.008) \\
+  VAS & 0.0001 & 0.004 & $-$0.0004 & $-$0.0004 \\
+  & (0.0002) & (0.034) & (0.002) & (0.001) \\
+  BIS-11 & 0.0001 & 0.003 & 0.00001 & 0.0001 \\
+  & (0.0001) & (0.008) & (0.0005) & (0.0002) \\
+  Sexo(F) & $-$0.020$^{*}$ & $-$1.726$^{*}$ & $-$0.149$^{**}$ & $-$0.124$^{**}$ \\
+  & (0.012) & (1.027) & (0.070) & (0.060) \\
+  Edad & 0.001$^{**}$ & 0.059 & 0.005$^{**}$ & 0.005$^{**}$ \\
+  & (0.0004) & (0.037) & (0.002) & (0.002) \\
+  Educación & 0.001 & 0.044 & 0.003 & 0.003 \\
+  & (0.001) & (0.104) & (0.007) & (0.006) \\
+  Constante & 0.002 & 0.813 & 0.206 & 0.129 \\
+  & (0.022) & (2.033) & (0.135) & (0.111) \\
+ \hline \\[-1.8ex]
+Observations & 43 & 43 & 43 & 43 \\
+Log Likelihood & 112.622 & $-$54.752 & 42.246 & 60.030 \\
+Akaike Inf. Crit. & $-$203.244 & 131.505 & $-$62.491 & $-$98.060 \\
+Bayesian Inf. Crit. & $-$183.871 & 150.878 & $-$43.118 & $-$78.687 \\
+\hline
+\hline \\[-1.8ex]
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+\end{tabular}
+\end{table}
+
+% Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Fri, Sep 20, 2019 - 04:18:40 AM
+\begin{table}[!htbp] \centering
+  \caption{Modelos de efectos mixtos de pequeño mundo en fase abierta de tratamiento (seis meses) con sexo, edad y educación como covariantes}
+  \label{}
+\begin{tabular}{@{\extracolsep{5pt}}lccc}
+\\[-1.8ex]\hline
+\hline \\[-1.8ex]
+ & \multicolumn{3}{c}{Variables dependientes} \\
+\cline{2-4}
+\\[-1.8ex] & L.Camino & C.Agrupamiento & P.Mundo \\
+\\[-1.8ex] & (1) & (2) & (3)\\
+\hline \\[-1.8ex]
+ Fase(T1) & 0.443$^{***}$ & 0.002 & 1.122$^{***}$ \\
+  & (0.055) & (0.009) & (0.156) \\
+  Fase(T2) & 0.410$^{***}$ & 0.003 & 0.734$^{***}$ \\
+  & (0.058) & (0.009) & (0.166) \\
+  Fase(T3) & 0.526$^{***}$ &  & 0.883$^{***}$ \\
+  & (0.052) &  & (0.147) \\
+  VAS & 0.004 & $-$0.0003 & 0.003 \\
+  & (0.007) & (0.001) & (0.019) \\
+  BIS-11 & $-$0.0002 & $-$0.001$^{*}$ & $-$0.002 \\
+  & (0.002) & (0.0003) & (0.004) \\
+  Sexo(F) & 1.069$^{**}$ & $-$0.048$^{**}$ & 0.648 \\
+  & (0.541) & (0.021) & (0.475) \\
+  Edad & $-$0.042$^{**}$ & 0.002$^{**}$ & $-$0.029$^{*}$ \\
+  & (0.019) & (0.001) & (0.017) \\
+  Educación & $-$0.011 & $-$0.001 & $-$0.032 \\
+  & (0.054) & (0.002) & (0.049) \\
+  Constante & 4.766$^{***}$ & 0.299$^{***}$ & 4.934$^{***}$ \\
+  & (0.994) & (0.045) & (0.969) \\
+ \hline \\[-1.8ex]
+Observations & 43 & 33 & 43 \\
+Log Likelihood & $-$5.515 & 47.144 & $-$33.307 \\
+Akaike Inf. Crit. & 33.031 & $-$74.288 & 88.615 \\
+Bayesian Inf. Crit. & 52.404 & $-$59.323 & 107.988 \\
+\hline
+\hline \\[-1.8ex]
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+\end{tabular}
+\end{table}
