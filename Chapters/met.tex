@@ -203,6 +203,9 @@ Posteriormente se aplicó una umbralización de consenso donde se reconstruyen l
 dado un umbral grupal $T$ (expresado como porcentaje) y una muestra de redes cerebrales $m$, una conexión es tomada como presente en la reconstrucción combinada si sobrepasa un umbral de conectividad $\tau$ en al menos $\frac{T}{100}m$ . \par
 Para esta investigación los parámetros utilizados fueron $\tau = 0.5$ y $T = 60\%$ y todas las auto-conexiones y conexiones negativas (anti-correlaciones funcionales) fueron retiradas de las matrices antes del análisis \parencite{Rubinov2010}.
 
+\subsubsection{Redes aleatorias}
+Una vez construidos los grafos, con el fin de calcular las medidas de pequeño mundo, se crearon 300 redes con el mismo número de nodos y grado de conectividad siguiendo el procedimiento propuesto por \textcite{Maslov2002}. De estas redes se obtuvieron las medidas $L^w_g$ y $C^w_g$ para posteriormente calcular $\lambda_g$ (formula \ref{eqLambda}), $\gamma_g$ (formula \ref{eqGamma}) y $\sigma$ (formula \ref{eqSW}).
+
 \subsection{Análisis de datos}
 \subsubsection{Medidas topológicas}
 Teniendo las matrices de adyacencia finales, los grafos de la red de conectividad funcional para cada sujeto fueron creados con la paquetería \texttt{brainGraph v2.2} \parencite{Watson2018}. Para cada grafo se extrajeron las siguientes medidas topológicas
@@ -215,6 +218,7 @@ Teniendo las matrices de adyacencia finales, los grafos de la red de conectivida
     \item eficiencia global
     \item escalar de pequeño-mundo
 \end{enumerate*}.
+
 
 \subsubsection{Análisis estadísticos}
 Los análisis estadísticos fueron hechos dentro del entorno de programación para \texttt{R} \texttt{RStudio} \parencite{Rstudio2018}.\par
