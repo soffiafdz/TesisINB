@@ -47,7 +47,7 @@
 \pagestyle{plain}
 \chapter*{\center Resumen}
 \addcontentsline{toc}{chapter}{Resumen Español}
-% \input{Chapters/absSp}
+\input{Chapters/absSp}
 
 \chapter*{\center Abstract}
 \addcontentsline{toc}{chapter}{Resumen Inglés}
@@ -76,8 +76,13 @@
 \chapter{Resultados}
 \input{Chapters/res}
 
+\chapter{Conclusiones}
+\input{Chapters/disc}
+
 \backmatter
 \addcontentsline{toc}{chapter}{\bibname}
 \printbibliography
+\listoffigures
+\listoftables
 \end{document}
 
