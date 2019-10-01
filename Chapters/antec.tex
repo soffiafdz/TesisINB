@@ -226,7 +226,7 @@ En redes anatómicas, un camino representa potenciales rutas de flujo de informa
 Los caminos en redes funcionales, en cambio, representan secuencias de asociaciones estadísticas, por lo que pueden no corresponder al flujo de información por medio de conexiones anatómicas. Esto puede hacer la interpretación de estas medidas menos intuitiva \parencite{Rubinov2010}. \par
 El largo de camino más corto, o \emph{distancia} $d_{ij}$ es la base para el cálculo de estas métricas.
 Mientras que un largo de camino binario es igual al número de aristas en el camino, un largo de camino ponderado $d_{ij}^w$ es igual a la suma total de la distancia de las aristas.
-Las distancias de las aristas\footnote{La distancia de las conexiones, en este sentido, es adimensional; es decir, no representa una distancia espacial o métrica} están inversamente relacionadas con el peso de las aristas, ya que un mayor peso de conexión típicamente representa asociaciones fuertes y mayor proximidad \parencite{Rubinov2010}.
+Las distancias de las aristas\footnote{La distancia de las conexiones, en este sentido, es adimensional; es decir, no representa una distancia espacial o métrica.} están inversamente relacionadas con el peso de las aristas, ya que un mayor peso de conexión típicamente representa asociaciones fuertes y mayor proximidad \parencite{Rubinov2010}.
 La media del tamaño de los caminos más cortos entre todos los pares de nodos de una red se denomina \emph{largo de camino característico} $L^w$ \parencite{Watts1998}
 \begin{equation}\label{eqCPL}
     L^w=\frac{1}{n}\Sigma_{i \in N}\frac{\Sigma_{j \in N,j\neq i}d_{ij}^w}{n-1}
