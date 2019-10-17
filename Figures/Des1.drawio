@@ -1,4 +1,4 @@
-<mxfile modified="2019-10-17T23:42:50.178Z" host="www.draw.io" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36" etag="yj2UhMmTztAqzHQkqKtk" version="12.1.3" type="github" pages="1">
+<mxfile modified="2019-10-17T23:50:23.484Z" host="www.draw.io" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36" etag="KJHazMK7AohQa7SRqwP_" version="12.1.3" type="github" pages="1">
   <diagram id="X8QFbIyJNCcSeq-3zXTJ" name="Page-1">
     <mxGraphModel dx="805" dy="455" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -76,8 +76,8 @@
         <mxCell id="HyLGZaf64-sT7RSGQJUq-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HyLGZaf64-sT7RSGQJUq-18" target="HyLGZaf64-sT7RSGQJUq-13">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-        <mxCell id="HyLGZaf64-sT7RSGQJUq-18" value="&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;b&gt;Controles sanos &lt;br&gt;&lt;/b&gt;&lt;/font&gt;Datos de neuroimagen de 45 sujetos controles sanos de estudio anterior.&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=1 1;rotation=0;" vertex="1" parent="1">
-          <mxGeometry x="126" y="273" width="184" height="90" as="geometry"/>
+        <mxCell id="HyLGZaf64-sT7RSGQJUq-18" value="&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;b&gt;Controles sanos &lt;br&gt;&lt;/b&gt;&lt;/font&gt;Datos de neuroimagen retomados de estudio previo.&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=1 1;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="136" y="273" width="164" height="57" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
