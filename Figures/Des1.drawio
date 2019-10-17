@@ -1,1 +1,85 @@
-<mxfile modified="2019-08-21T18:04:16.705Z" host="www.draw.io" agent="Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0" etag="RdbBbYFjme7z40rie7Gn" version="11.2.1" type="github" pages="1"><diagram id="X8QFbIyJNCcSeq-3zXTJ" name="Page-1">7Vptc5s4EP41nul9sAeBwfDRsd1cepe5TJKbtp9uFFBstQK5Qjh2f/0JLBkwwi+xoW4mM52ptVoJaZ9nl90lHWsULq8ZnM9uaYBIxzSCZccad0wT9E2zk/4zgtVa4irBlOFAKuWCB/wTSaEhpQkOUFxS5JQSjudloU+jCPm8JIOM0Zey2jMl5afO4RRVBA8+JFXpZxzwmbyFbeTyPxGeztSTgSFnQqiUpSCewYC+FETWpGONGKV8/StcjhBJjafssl73sWZ2czCGIn7IguQp/O/zlf/pIbnrej/+Gf4VPYy7EoyYr9SFUSDuL4eU8Rmd0giSSS69YjSJApTuaohRrvM3pXMhBEL4DXG+kmDChFMhmvGQyFm0xPxL4ffXdKueacvheCm3zgYrNYg4W30paKbjr2qXdJCvy0Zq4fqG6bVqDSdFMU2YL7XY95t/iTeFFg4X99F4GI8WTldBySGbIr5DEbgbgIVnIBoicSKxkCECOV6UTwIlRacbPbl0yBhcFRTmFEc8Lux8lwqEgvQ2W3FP+poJvDIj9ugD19ip3wc79cWP9YnVqHD1XJSxUs/QnTZfQJJIu1U4W2bkywxz9DCHGZQvIiyV2RfAeJbpqsEd5ByxKJOYBsgYzgVMNCoxSEOYBWIcLQuiKuJy1jK9nr1lvDU4xkseVoAKK7NiSFEW0PGkYPvjTQs0lnWIeOzVM81wz03s/EiomujGmWMPU2OZ82U+KX5N0//vkU8SDkMs7EU7pjicoTZ+YkpJBOxYzGOlZeDombJQxMjMRuK6BEFOGf4JfdwZWZ0rK+pVt1ESYYD1oZX4FIqcH/9+2XMGRgV7VwO91xTy/VrkZ+ZBuNs63I9mj3aXyeS6FtSNOD3mmZHuemfC2gVlRzecCtieo/FztyGwB6e7uaUD6polc1rw7URNPDKYe/8GsmQbxtyJ0/eKEaNY+PfHGIUwgnsYcFp8OiKKrMUBXhzytME5nGLnJgefWIizQ7/qHk169+YmG3e/fWSFUz/VXznz84wdcbv2eDO4at244WAwEqsZJYcFgg9KhJVEVE1hYe1G/scxUeTV5r2sJMI03NKbpV/NIjxdAmk3lkDqcvNGosR5tn009uNfeWSNas6pUYLiFGjIMI3TVgRJ09XhOMK+GOtWPAoWwEyVTiMsCkKo17u9v+ldGgmBVSahJpUdtJnKAus34yB45+DJgdD7ZRzUdtFAxUBtdNFUQ6xr9AzT6hRaYkavn/fIatpi2egOMSxMgNj5e2VAtjv29soKzdAWe2XWYLDVjtnd+7J297726quXdaO9MmVzTSwspDVjFKMohLEPWbVKayL9OVtlbane347SGgBdCtRUbQ2cQyy+s+jRJqcbzQ8iShNNsqsphi47ebWs7Q7oZpMCeo4GvIHdFHhn6Iy0mzqkjbv35OFEInoVIoJqGGk3h3XbIuK+bsterhzbcmiwlSQSfyMU77KWu0FNXmkd1eO32sCwXKfkeK5b8TuvX/U7u7EXgPebvQDM/fBfUvi/ub+9uPDfd/d+ims19pv1X2Ffzx53V4u22pHdT6UtDIWteRmoWGz5HY0ooWktGdEorXGfMSFbIkjwNEXTFwimZedVihz2IRnKiRAHQVYg65hR5s4v+pK/VYN4VrUGcewqgxr7jG/Wf8096cPAMMriACA4xk0XGWcrER2n3BoCht1eiahtDrXWn3xLuZ3zntu1n9tVvEzji7WOZ9vl96rr9qqe11R2p3W8+rB4mcmd9Z7cnUpCp9/fSu40JDxTeieG+R/vrju4+Z9AW5P/AQ==</diagram></mxfile>
+<mxfile modified="2019-10-17T23:42:50.178Z" host="www.draw.io" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36" etag="yj2UhMmTztAqzHQkqKtk" version="12.1.3" type="github" pages="1">
+  <diagram id="X8QFbIyJNCcSeq-3zXTJ" name="Page-1">
+    <mxGraphModel dx="805" dy="455" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="HyLGZaf64-sT7RSGQJUq-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="rkIUl9ga3imvRnDAsCv6-20" target="rkIUl9ga3imvRnDAsCv6-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="355"/>
+              <mxPoint x="590" y="260"/>
+              <mxPoint x="497" y="260"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkIUl9ga3imvRnDAsCv6-20" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=1 1;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="387" y="280" width="183" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="rkIUl9ga3imvRnDAsCv6-1" value="&lt;font style=&quot;font-size: 11px&quot;&gt;Reclutamiento, &lt;br&gt;consentimiento informado y aleatorización.&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="10" y="109.92857142857144" width="90" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="rkIUl9ga3imvRnDAsCv6-4" value="&lt;h2&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;EEG&lt;/font&gt;&lt;/h2&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=-90;" parent="1" vertex="1">
+          <mxGeometry x="60" y="137.92857142857144" width="105" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="rkIUl9ga3imvRnDAsCv6-7" value="&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;Grupo &lt;u style=&quot;font-size: 12px&quot;&gt;Tratamiento&lt;/u&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;10 ses./semana&lt;/font&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/font&gt;&lt;div style=&quot;font-size: 11px&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;b style=&quot;font-size: 12px&quot;&gt;EMTr&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;2 semanas&lt;br&gt;&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;Grupo &lt;u style=&quot;font-size: 12px&quot;&gt;Control&lt;/u&gt;&lt;br&gt;(&lt;i style=&quot;font-size: 12px&quot;&gt;sham&lt;/i&gt;)&lt;br&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;10 ses./semana&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="231.5" y="58.428571428571445" width="95" height="183" as="geometry"/>
+        </mxCell>
+        <mxCell id="rkIUl9ga3imvRnDAsCv6-10" value="&lt;font&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;T0&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;Cuestionarios clínicos;&lt;br&gt;Tareas cognitivas;&lt;br&gt;MRI.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="125" y="100.92857142857144" width="80" height="98" as="geometry"/>
+        </mxCell>
+        <mxCell id="HyLGZaf64-sT7RSGQJUq-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="rkIUl9ga3imvRnDAsCv6-15" target="rkIUl9ga3imvRnDAsCv6-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="418" y="260"/>
+              <mxPoint x="367" y="260"/>
+              <mxPoint x="367" y="355"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rkIUl9ga3imvRnDAsCv6-15" value="&lt;div&gt;Desenmascaramiento&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=-90;" parent="1" vertex="1">
+          <mxGeometry x="345.5" y="137.92857142857144" width="146" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="rkIUl9ga3imvRnDAsCv6-16" value="&lt;div style=&quot;font-size: 11px&quot;&gt;&lt;b&gt;EMTr&lt;br&gt;&lt;/b&gt;(real)&lt;br&gt;2 semanas&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="398" y="329.92857142857144" width="82" height="75" as="geometry"/>
+        </mxCell>
+        <mxCell id="rkIUl9ga3imvRnDAsCv6-18" value="&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;b&gt;EMTr&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;div style=&quot;font-size: 11px&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;3 meses&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;2 ses/semana&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="454" y="115.92857142857144" width="86" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="rkIUl9ga3imvRnDAsCv6-21" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px&quot;&gt;Grupo Control&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;dashPattern=1 1;rotation=0;" parent="1" vertex="1">
+          <mxGeometry x="397.5" y="289.92857142857144" width="165" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="HyLGZaf64-sT7RSGQJUq-6" value="&lt;font&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;T1&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;Cuestionarios clínicos;&lt;br&gt;Tareas cognitivas;&lt;br&gt;MRI.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="326.5" y="100.92857142857144" width="80" height="98" as="geometry"/>
+        </mxCell>
+        <mxCell id="HyLGZaf64-sT7RSGQJUq-7" value="&lt;font&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;T2&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;Cuestionarios clínicos;&lt;br&gt;Tareas cognitivas;&lt;br&gt;MRI.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="540" y="100.92857142857144" width="80" height="98" as="geometry"/>
+        </mxCell>
+        <mxCell id="HyLGZaf64-sT7RSGQJUq-8" value="&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;b&gt;EMTr&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;&lt;div style=&quot;font-size: 11px&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;3 meses&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px&quot;&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;2 ses/semana&lt;br&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="620" y="115.92857142857144" width="86" height="68" as="geometry"/>
+        </mxCell>
+        <mxCell id="HyLGZaf64-sT7RSGQJUq-10" value="&lt;font&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;T3&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;Cuestionarios clínicos;&lt;br&gt;Tareas cognitivas;&lt;br&gt;MRI.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="706" y="100.92857142857144" width="80" height="98" as="geometry"/>
+        </mxCell>
+        <mxCell id="HyLGZaf64-sT7RSGQJUq-11" value="&lt;font&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;T0&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px&quot;&gt;Cuestionarios clínicos;&lt;br&gt;Tareas cognitivas;&lt;br&gt;MRI.&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="317.92857142857144" width="80" height="98" as="geometry"/>
+        </mxCell>
+        <mxCell id="HyLGZaf64-sT7RSGQJUq-12" value="&lt;div&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;Análisis Fase Cerrada&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="355" y="138" width="175" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="HyLGZaf64-sT7RSGQJUq-13" value="&lt;div&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;Análisis Transversal&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="148" y="136.5" width="140" height="27" as="geometry"/>
+        </mxCell>
+        <mxCell id="HyLGZaf64-sT7RSGQJUq-14" value="&lt;div&gt;&lt;font style=&quot;font-size: 12px&quot;&gt;Análisis Fase Abierta&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;rotation=-90;" vertex="1" parent="1">
+          <mxGeometry x="710" y="138" width="175" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="HyLGZaf64-sT7RSGQJUq-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="HyLGZaf64-sT7RSGQJUq-18" target="HyLGZaf64-sT7RSGQJUq-13">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="HyLGZaf64-sT7RSGQJUq-18" value="&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;b&gt;Controles sanos &lt;br&gt;&lt;/b&gt;&lt;/font&gt;Datos de neuroimagen de 45 sujetos controles sanos de estudio anterior.&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=1 1;rotation=0;" vertex="1" parent="1">
+          <mxGeometry x="126" y="273" width="184" height="90" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
