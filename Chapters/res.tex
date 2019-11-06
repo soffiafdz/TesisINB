@@ -1,13 +1,13 @@
 \section{Exploración con sujetos controles}
 \subsection{Demográficos}
 
-En la tabla \ref{tab:demHC} se muestran las medidas demográficas de los pacientes dependientes a cocaína y la submuestra independiente de controles sanos.
-No hubo diferencia significativa en el sexo ni nivel educativo; los sujetos con dependencia fueron significativamente mayores y con una mayor proporción de fumadores que los controles sanos.
+En la tabla \ref{tab:demHC} se muestran las medidas demográficas de los pacientes dependientes a cocaína y la submuestra independiente de controles.
+No hubo diferencia significativa en el sexo ni nivel educativo; los sujetos con dependencia fueron significativamente mayores y con una mayor proporción de fumadores que los controles.
 
 \begin{table}[hbp]
     \centering
     \small
-    \caption{Datos demográficos entre pacientes con adicción y controles sanos}
+    \caption{Datos demográficos entre pacientes con adicción y controles}
     \label{tab:demHC}
     \begin{tabular}{lccc}
         \hline
@@ -36,7 +36,7 @@ bajo el mismo umbral (Figura \ref{fig:dsHC}).
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=0.8\textwidth]{dens_str_VS.png}
-    \caption{Medidas de densidad y fuerza de redes de conectividad  de los pacientes con adicción y controles sanos bajo los distintos umbrales (valores de $\tau$)}
+    \caption{Medidas de densidad y fuerza de redes de conectividad  de los pacientes con adicción y controles bajo los distintos umbrales (valores de $\tau$)}
     \label{fig:dsHC}
 \end{figure}
 
@@ -45,12 +45,12 @@ De manera similar, los pacientes con adicción mostraron, a su vez, una mayor ef
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=0.8\textwidth]{effs_VS.png}
-    \caption{Medidas de eficiencia local y global de redes de conectividad de pacientes con adicción y controles sanos bajo distintos umbrales (valores de $\tau$)}
+    \caption{Medidas de eficiencia local y global de redes de conectividad de pacientes con adicción y controles bajo distintos umbrales (valores de $\tau$)}
     \label{fig:effHC}
 \end{figure}
 
-No obstante, los pacientes con adicción obtuvieron una menor métrica de pequeño mundo.
-En los umbrales más permisivos la diferencia es mínima, pero conforme disminuye la densidad de la red la cualidad de pequeño mundo de las redes de controles sanos aumenta en mayor medida que la de los pacientes dependientes (Figura \ref{fig:sigmaHC}).
+No obstante, los pacientes con adicción obtuvieron una menor métrica de mundo pequeño.
+En los umbrales más permisivos la diferencia es mínima, pero conforme disminuye la densidad de la red la cualidad de mundo pequeño de las redes de controles sanos aumenta en mayor medida que la de los pacientes dependientes (Figura \ref{fig:sigmaHC}).
 
 \begin{figure}[!ht]
     \centering
@@ -66,11 +66,11 @@ En los umbrales más permisivos la diferencia es mínima, pero conforme disminuy
         \caption{Umbrales altos}
         \label{fig:sigma2}
     \end{subfigure}
-    \caption{Largo de camino, coeficiente de agrupamiento y métrica de pequeño mundo en redes de conectividad de pacientes con adicción y controles bajo distintos umbrales (niveles de $\tau$)}
+    \caption{Longitud de camino, coeficiente de agrupamiento y métrica de mundo pequeño en redes de conectividad de pacientes con adicción y controles bajo distintos umbrales (niveles de $\tau$)}
     \label{fig:sigmaHC}
 \end{figure}
 
-Tomando un valor de $\tau$ intermedio de 0.25, en la tabla \ref{tab:lmHC} se enlistan las regresiones lineares multivariadas de las distintas métricas de grafo comparando las redes de los pacientes dependientes contra aquellas de controles sanos y tomando edad, sexo y nivel educativo como covariantes. El grupo experimental fue un predictor significativo para todas las variables dependientes.
+Tomando un valor de $\tau$ intermedio de 0.25, en la tabla \ref{tab:lmHC} se enlistan las regresiones lineares multivariadas de las distintas métricas de grafo comparando las redes de los pacientes dependientes contra aquellas de controles y tomando edad, sexo y nivel educativo como covariantes. El grupo experimental fue un predictor significativo para todas las variables dependientes.
 
 % Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
 % Date and time: Mon, Sep 16, 2019 - 09:43:43 PM
@@ -83,7 +83,7 @@ Tomando un valor de $\tau$ intermedio de 0.25, en la tabla \ref{tab:lmHC} se enl
 \hline \\[-1.8ex]
  & \multicolumn{5}{c}{Variables dependientes} \\
 \cline{2-6}
-\\[-1.8ex] & Densidad & Fuerza & E.Global & E.Local & P.Mundo \\
+\\[-1.8ex] & Densidad & Fuerza & E.Global & E.Local & MundoP. \\
 \\[-1.8ex] & (1) & (2) & (3) & (4) & (5)\\
 \hline \\[-1.8ex]
  Grupo(HC) & $-$0.007$^{***}$ & $-$0.626$^{***}$ & $-$0.051$^{***}$ & $-$0.126$^{***}$ & 17.766$^{***}$ \\
@@ -195,7 +195,7 @@ En la fase basal encontramos una correlación entre las mediciones de \textit{cr
 \end{figure}
 
 En las distintas mediciones clínicas se pudo observar un patrón de cambio distinto en los sujetos que mostraban un puntaje basal alto o bajo (separado por la mediana) (Figura \ref{fig:clin1}). Mientras que todos los sujetos que comenzaban con un puntaje alto demostraban una disminución en su puntaje a las dos semanas de tratamiento independientemente del grupo experimental (con excepción de la escala de impulsividad de Barratt, donde el grupo de estimulación sham se mantuvo constante; Figura \ref{fig:cl1B11}), las diferencias entre los grupos de estimulación, cuando hubo, se encontraron principalmente en aquellos sujetos que tuvieron un puntaje basal bajo. \par
-En la escala visual análoga, los sujetos de puntaje basal bajo que llevaron estimulación sham expresaron un aumento en el nivel de \textit{craving}, a diferencia de quienes llevaron estimulación real (Figura \ref{fig:cl1VAS}) De igual forma, pero en menor medida, ocurrió lo mismo con las escalas de CCQ-N (Figura \ref{fig:cl1CN}) y de impulsividad de Barratt (Figura \ref{fig:cl1B11}). En la escala de CCQ-G no hubo diferencia entre grupo experimental ni de puntaje. \par
+En la escala visual análoga, los sujetos de puntaje basal bajo que llevaron estimulación sham expresaron un aumento en el nivel de \textit{craving}, a diferencia de quienes llevaron estimulación real (Figura \ref{fig:cl1VAS}) En menor medida, ocurrió lo mismo con las escalas de CCQ-N (Figura \ref{fig:cl1CN}) y de impulsividad de Barratt (Figura \ref{fig:cl1B11}). En la escala de CCQ-G no hubo diferencia entre grupo experimental ni de puntaje. \par
 
 Debido a estas diferencias se pretendió predecir los puntajes clínicos post-tratamiento utilizando el grupo de tratamiento y los puntajes basales como covariantes\footnote{Debido a la correlación de variables de \textit{craving} basales, para evitar colinealidad solo se introdujo la misma variable basal de esta sintomatología como covariante para cada modelo.}. En la tabla \ref{tab:lmCl1} se muestran los coeficientes y parámetros de los distintos modelos. \par
 En todos los modelos, el puntaje basal de la misma escala fue un predictor significativo (VAS, $0.382\ (0.098),\ p<0.01$; CCQ-G, $0.567\ (0.148),\ p<0.01$; CCQ-N, $0.536\ (0.127),\ p<0.01$; BIS-11, $0.876\ (0.127),\ p<0.01$). El grupo experimental fue un predictor significativo en los modelos clínicos de \textit{craving} por medio de la escala visual análoga ($-1.529\ (0.667),\ p<0.05$) y de impulsividad ($-11.335\ (4.242),\ p<0.05$) controlando por el puntaje basal tanto de \textit{craving} como de impulsividad en ambos modelos.
@@ -302,14 +302,14 @@ Crit. I. Bayesiano & $-$678.003 & 89.159 & $-$234.386 & $-$353.809 \\
 \end{tabular}
 \end{table}
 
-Al evaluar la eficiencia de forma global y en comparación con redes aleatorias equivalentes, encontramos una interacción significativa entre el grupo experimental y la fase de tratamiento para la escalar de pequeño mundo ($1.804\ (0.2),\ p<0.01$) y el largo de camino característico ($0.935\ (0.185),\ p<0.01$), una de las dos medidas de donde esta se deriva (tabla \ref{tab:memT2}). \par
-El largo de camino característico aumentó en mayor medida en los participantes del grupo de estimulación real que los del grupo placebo. El coeficiente de agrupamiento fue también mayor en este grupo mientras que los participantes que recibieron estimulación sham mostraron una ligera disminución en esta medida. Sin embargo, esta diferencia no resultó significativa en el modelo explorado ($0.013\ (0.009),\ p>0.05$) (tabla \ref{tab:memT2} (2)). \par
-En los participantes cuyas dos semanas de tratamiento consistió en estimulación real notamos un incremento en la métrica de pequeño mundo comparada con la calculada a partir de sus redes en la etapa basal al contrario de aquellos participantes donde la estimulación fue sham, en quienes esta métrica disminuyó a las dos semanas del tratamiento (Figura \ref{fig:gpT3}).
+Al evaluar la eficiencia de forma global y en comparación con redes aleatorias equivalentes, encontramos una interacción significativa entre el grupo experimental y la fase de tratamiento para el escalar de mundo pequeño ($1.804\ (0.2),\ p<0.01$) y la longitud de camino característica ($0.935\ (0.185),\ p<0.01$), una de las dos medidas de donde esta se deriva (tabla \ref{tab:memT2}). \par
+La longitud de camino característica aumentó en mayor medida en los participantes del grupo de estimulación real que los del grupo placebo. El coeficiente de agrupamiento fue también mayor en este grupo mientras que los participantes que recibieron estimulación sham mostraron una ligera disminución en esta medida. Sin embargo, esta diferencia no resultó significativa en el modelo explorado ($0.013\ (0.009),\ p>0.05$) (tabla \ref{tab:memT2} (2)). \par
+En los participantes cuyas dos semanas de tratamiento consistió en estimulación real notamos un incremento en la métrica de mundo pequeño comparada con la calculada a partir de sus redes en la etapa basal al contrario de aquellos participantes donde la estimulación fue sham, en quienes esta métrica disminuyó a las dos semanas del tratamiento (Figura \ref{fig:gpT3}).
 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.9\textwidth]{gphT3.png}
-    \caption{Medidas de largo de camino, coeficiente de agrupamiento y escalar de pequeño mundo de redes de pacientes con adicción antes y después de dos semanas de tratamiento de EMTr}
+    \caption{Medidas de longitud de camino, coeficiente de agrupamiento y escalar de mundo pequeño de redes de pacientes con adicción antes y después de dos semanas de tratamiento de EMTr}
     \label{fig:gpT3}
 \end{figure}
 
@@ -317,14 +317,14 @@ En los participantes cuyas dos semanas de tratamiento consistió en estimulació
 % Date and time: Tue, Sep 17, 2019 - 03:28:16 AM
 \begin{table}[!htb] \centering
     \small
-  \caption{Modelos de efectos mixtos de métricas de pequeño mundo en la fase cerrada de tratamiento con sexo, edad y educación como covariantes}
+  \caption{Modelos de efectos mixtos de métricas de mundo pequeño en la fase cerrada de tratamiento con sexo, edad y educación como covariantes}
   \label{tab:memT2}
 \begin{tabular}{@{\extracolsep{5pt}}lccc}
 \\[-1.8ex]\hline
 \hline \\[-1.8ex]
  & \multicolumn{3}{c}{Variables dependientes} \\
 \cline{2-4}
-\\[-1.8ex] & L.Camino & C.Agrupamiento & P.Mundo \\
+\\[-1.8ex] & L.Camino & C.Agrupamiento & MundoP. \\
 \\[-1.8ex] & (1) & (2) & (3)\\
 \hline \\[-1.8ex]
  Fase(Post-) & 0.079 & $-$0.010$^{*}$ & $-$1.134$^{***}$ \\
@@ -519,15 +519,15 @@ Crit. Inf. Bayesiano & $-$321.001 & 88.850 & $-$109.253 & $-$132.046 \\
 \end{tabular}
 \end{table}
 
-En el largo de camino característico encontramos un aumento a las dos semanas de tratamiento ($0.778\ (0.076),\ p<0.01$), aunque este fue acompañado también de un incremento en el agrupamiento ($0.01\ (0.007),\ p<0.01$). A los tres meses de mantenimiento el largo de camino se mantuvo aumentado en comparación con la medición basal ($0.563\ (0.08),\ p<0.01$), pero una disminución en comparación con la fase anterior demostrado en los análisis post-hoc ($-0.215\ (0.06),\ Z=-3.5,\ p<0.01$). \par
+En la longitud de camino característica encontramos un aumento a las dos semanas de tratamiento ($0.778\ (0.076),\ p<0.01$), aunque este fue acompañado también de un incremento en el agrupamiento ($0.01\ (0.007),\ p<0.01$). A los tres meses de mantenimiento el largo de camino se mantuvo aumentado en comparación con la medición basal ($0.563\ (0.08),\ p<0.01$), pero una disminución en comparación con la fase anterior demostrado en los análisis post-hoc ($-0.215\ (0.06),\ Z=-3.5,\ p<0.01$). \par
 El coeficiente de agrupamiento, aunque no tuvo cambios significativos a las dos semanas de tratamiento ($0.01\ (0.007),\ p>0.05$), mostró un incremento significativo a la fase basal ($0.021\ (0.008),\ p<0.01$) pero no significativo en relación a la fase de tratamiento ($0.01\ (0.006),\ Z=1.883,\ p>0.05$).\par
-Por su parte, la métrica de pequeño mundo mostró un aumento significativo a las dos semanas de tratamiento ($1.465\ (0.098),\ p<0.01$) y a los tres meses de mantenimiento pero en menor magnitud ($1.219\ (0.105),\ p<0.05$). La diferencia entre el tratamiento y el mantenimiento resultó significativo en el análisis post-hoc ($-0.245\ (0.776),\ Z=-3.163,\ p<0.01$). \par
-La edad fue una covariante significativa positiva tanto para el coeficiente de agrupamiento ($0.003\ (0.001),\ p<0.05$) como para la escalar de pequeño mundo ($0.035\ (0.016),\ p<0.05$).
+Por su parte, la métrica de mundo pequeño mostró un aumento significativo a las dos semanas de tratamiento ($1.465\ (0.098),\ p<0.01$) y a los tres meses de mantenimiento pero en menor magnitud ($1.219\ (0.105),\ p<0.05$). La diferencia entre el tratamiento y el mantenimiento resultó significativo en el análisis post-hoc ($-0.245\ (0.776),\ Z=-3.163,\ p<0.01$). \par
+La edad fue una covariante significativa positiva tanto para el coeficiente de agrupamiento ($0.003\ (0.001),\ p<0.05$) como para el escalar de mundo pequeño ($0.035\ (0.016),\ p<0.05$).
 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.9\textwidth]{graphL13.png}
-    \caption{Métricas de pequeño mundo de pacientes con adicción en fase basal (T0), después de dos semanas tratamiento (T1) y tres meses de mantenimiento (T2)}
+    \caption{Métricas de mundo pequeño de pacientes con adicción en fase basal (T0), después de dos semanas tratamiento (T1) y tres meses de mantenimiento (T2)}
     \label{fig:gpL13}
 \end{figure}
 
@@ -536,14 +536,14 @@ La edad fue una covariante significativa positiva tanto para el coeficiente de a
 % Date and time: Fri, Sep 20, 2019 - 03:39:49 AM
 \begin{table}[!htbp] \centering
     \small
-  \caption{Modelos de efectos mixtos de métricas de pequeño mundo en fase abierta del proyecto (dos semanas de tratamiento; tres meses de mantenimiento) con medidas demográficas como covariantes}
+  \caption{Modelos de efectos mixtos de métricas de mundo pequeño en fase abierta del proyecto (dos semanas de tratamiento; tres meses de mantenimiento) con medidas demográficas como covariantes}
   \label{tab:memL12}
 \begin{tabular}{@{\extracolsep{5pt}}lccc}
 \\[-1.8ex]\hline
 \hline \\[-1.8ex]
  & \multicolumn{3}{c}{Variables dependientes} \\
 \cline{2-4}
-\\[-1.8ex] & L.Camino & C.Agrupamiento & P.Mundo \\
+\\[-1.8ex] & L.Camino & C.Agrupamiento & MundoP. \\
 \\[-1.8ex] & (1) & (2) & (3)\\
 \hline \\[-1.8ex]
  Fase(T1) & 0.778$^{***}$ & 0.010 & 1.465$^{***}$ \\
@@ -744,13 +744,13 @@ Crit. Inf. Bayesiano & $-$191.810 & 152.074 & $-$47.708 & $-$84.504 \\
 \end{tabular}
 \end{table}
 
-En el largo de camino característico encontramos un patrón de aumento constante desde la medición basal hasta los seis meses post-mantenimiento (T1, $0.443\ (0.054)$; T2, $0.41\ (0.057)$; T3, $0.530\ (0.049)$, todas $p<0.01$), mas ninguna de las mediciones post-hocs entre mediciones resultó significativa (T3\textendash{}T1, $0.083\ (0.046),\ Z=1.807,\ p>0.05$; T3\textendash{}T2, $0.116\ (0.047),\ Z=2.445,\ p>0.05$). Tanto sexo ($1.06l\ (0.544),\ p<0.05$) como edad ($-0.042 (0.019),\ p<0.05$) fueron covariantes significativas para esta métrica topológica. En esta submuestra no se encontraron cambios significativos en el coeficiente de agrupamiento entre las fases de medición, pero si una diferencia relativa al sexo ($-0.036\ (0.016),\ p<0.05$) (tabla \ref{tab:memL22}).\par
-En la métrica de pequeño mundo observamos un aumento a los seis meses de mantenimiento ($0.827\ (0.149),\ p<0.01$). Los análisis post-hoc, por su parte, no demostraron diferencias significativas con la sesion post-tratamiento ($-0.24\ (0.132),\ Z=-1.81,\ p>0.05$) ni a los 3 meses de mantenimiento ($0.148\ (0.136),\ Z=1.09,\ p>0.05$).
+En la longitud de camino característica encontramos un patrón de aumento constante desde la medición basal hasta los seis meses post-mantenimiento (T1, $0.443\ (0.054)$; T2, $0.41\ (0.057)$; T3, $0.530\ (0.049)$, todas $p<0.01$), mas ninguna de las mediciones post-hocs entre mediciones resultó significativa (T3\textendash{}T1, $0.083\ (0.046),\ Z=1.807,\ p>0.05$; T3\textendash{}T2, $0.116\ (0.047),\ Z=2.445,\ p>0.05$). Tanto sexo ($1.06l\ (0.544),\ p<0.05$) como edad ($-0.042 (0.019),\ p<0.05$) fueron covariantes significativas para esta métrica topológica. En esta submuestra no se encontraron cambios significativos en el coeficiente de agrupamiento entre las fases de medición, pero si una diferencia relativa al sexo ($-0.036\ (0.016),\ p<0.05$) (tabla \ref{tab:memL22}).\par
+En la métrica de mundo pequeño observamos un aumento a los seis meses de mantenimiento ($0.827\ (0.149),\ p<0.01$). Los análisis post-hoc, por su parte, no demostraron diferencias significativas con la sesion post-tratamiento ($-0.24\ (0.132),\ Z=-1.81,\ p>0.05$) ni a los 3 meses de mantenimiento ($0.148\ (0.136),\ Z=1.09,\ p>0.05$).
 
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.9\textwidth]{graphL23.png}
-    \caption{Métricas de pequeño mundo de pacientes con adicción en mediciones basal (T0), a dos semanas de tratamiento (T1), tres meses (T2) y seis meses (T3) de mantenimiento}
+    \caption{Métricas de mundo pequeño de pacientes con adicción en mediciones basal (T0), a dos semanas de tratamiento (T1), tres meses (T2) y seis meses (T3) de mantenimiento}
     \label{fig:gpL23}
 \end{figure}
 
@@ -765,7 +765,7 @@ En la métrica de pequeño mundo observamos un aumento a los seis meses de mante
 \hline \\[-1.8ex]
  & \multicolumn{3}{c}{Variables dependientes} \\
 \cline{2-4}
-\\[-1.8ex] & L.Camino & C.Agrupamiento & P.Mundo \\
+\\[-1.8ex] & L.Camino & C.Agrupamiento & MundoP. \\
 \\[-1.8ex] & (1) & (2) & (3)\\
 \hline \\[-1.8ex]
  Fase(T1) & 0.443$^{***}$ & 0.006 & 1.117$^{***}$ \\

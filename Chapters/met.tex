@@ -8,7 +8,7 @@ Para el presente proyecto, tanto pacientes de la clínica de adicciones del INPR
 Cuarenta y seis sujetos fueron asignados aleatoriamente a los distintos grupos de estimulación (Figura \ref{fig:flow}).
 Un grupo recibió estimulación sobre la corteza prefrontal dorsolateral izquierda y el otro, un protocolo sham de estimulación simulada sobre la misma área.
 
-\subsection{Controles sanos}
+\subsection{Grupo control}
 Para la realización del análisis transversal de pacientes adictos y controles sanos, los datos de neuroimagen de una submuestra de 45 sujetos sanos fueron retomados de la base de datos de un proyecto realizado con anterioridad en el INPRFM \parencite{Garza2017}.
 Debido a que la cantidad total de los sujetos sanos de la base de datos de ese estudio es menor al número de participantes reclutados para nuestro proyecto fue imposible parear ambos grupos.
 
@@ -97,7 +97,7 @@ A todos los participantes se les aplicó un electroencefalograma para descartar 
 La primera fase de tratamiento consistió en 20 sesiones de EMTr real o sham a lo largo de 10 días hábiles consecutivos. Cada sesión fue aplicada por un técnico entrenado en la administración de EMTr. Tomó el umbral motor, ubicó la zona de estimulación y se encargo de aplicar los trenes de estimulación y estar al pendiente de posibles efectos adversos.
 Los pacientes tuvieron un descanso de 30 minutos entre ambas sesiones.
 Al finalizar, el técnico tomó un registro de cualquier molestia y se agendó la cita del siguiente día.\par
-Terminando las 20 sesiones, los pacientes pasaron por otra evaluación (T1) clínica, de orina y MRI, antes de ser revelada su asignación de grupo.
+Una vez terminadas las 20 sesiones, los pacientes pasaron por otra evaluación (T1) clínica, de orina y MRI, antes de ser revelada su asignación de grupo.
 
 \subsubsection{Etapa 1-4}
 A todos aquellos participantes que llevaron estimulación sham se les ofreció continuar con un tratamiento de EMTr por otras 20 sesiones con las mismas características que el grupo de tratamiento real. Una vez concluidas las dos semanas de la fase abierta, una tercera evaluación clínica, de orina y MRI (T1-4) fue realizada.
@@ -109,10 +109,10 @@ Esta etapa consistió en la primera fase de sesiones semanales de mantenimiento.
 Se continuó el mantenimiento bajo las mismas condiciones por otras 12 semanas hasta completar los seis meses transcurridos desde la etapa basal y llevar a cabo una última evaluación clínica, de orina y MRI (T3).
 
 \section{Instrumentos}
-\subsection{Medidas de craving y recaída}
+\subsection{Medidas de \textit{craving} y recaída}
 \begin{description}
-    \item[CCQ-G] Cuestionario de Craving de la Cocaína, versión general (Cocaine Craving Questionnaire, General); escala que evalúa el deseo intenso hacia la droga de forma promedio en la última semana \parencite{Tiffany1993}.
-    \item[CCQ-N] Cuestionario de Craving a la Cocaína, versión actual (Cocaine Craving Questionnaire, Now); escala que evalúa de forma presente el deseo intenso hacia la droga en el momento de aplicación \parencite{Tiffany1993}.
+    \item[CCQ-G] Cuestionario de \textit{Craving} de la Cocaína, versión general (\textit{Cocaine Craving Questionnaire, General}); escala que evalúa el deseo intenso hacia la droga de forma promedio en la última semana \parencite{Tiffany1993}.
+    \item[CCQ-N] Cuestionario de \textit{Craving} a la Cocaína, versión actual (\textit{Cocaine Craving Questionnaire, Now}); escala que evalúa de forma presente el deseo intenso hacia la droga en el momento de aplicación \parencite{Tiffany1993}.
     \item[VAS] Escala Visual Análoga; escala visual análoga de \SI{100}{\milli\meter} utilizada para representar el \textit{craving} en el momento.
     \item[Línea de tiempo restrospectiva] Calendario de consumo como herramienta para medir el \emph{lapso} (por lo menos un evento de consumo con patrón diferente al basal) y \emph{relapso} (evento de consumo con el mismo patrón que el consumo basal).
 \end{description}
@@ -207,14 +207,14 @@ Teniendo las matrices de adyacencia finales, los grafos de la red de conectivida
     \item grado
     \item densidad
     \item coeficiente de agrupamiento
-    \item largo de camino característico
+    \item longitud de camino característica
     \item eficiencia local
     \item eficiencia global
-    \item escalar de pequeño-mundo
+    \item escalar de mundo pequeño
 \end{enumerate*}.
 
 \subsection{Redes aleatorias}
-Una vez construidos los grafos a partir de las matrices de adyacencia umbralizadas, con el fin de calcular las medidas de pequeño mundo, se crearon 300 redes con el mismo número de nodos y grado de conectividad siguiendo el procedimiento propuesto por \textcite{Maslov2002}. De estas redes se obtuvieron las medidas $L^w_g$ y $C^w_g$ para posteriormente calcular $\lambda_g$ (formula \ref{eqLambda}), $\gamma_g$ (formula \ref{eqGamma}) y la escalar de pequeño mundo $\sigma$ (formula \ref{eqSW}).
+Una vez construidos los grafos a partir de las matrices de adyacencia umbralizadas, con el fin de calcular las medidas de mundo pequeño, se crearon 300 redes con el mismo número de nodos y grado de conectividad siguiendo el procedimiento propuesto por \textcite{Maslov2002}. De estas redes se obtuvieron las medidas $L^w_g$ y $C^w_g$ para posteriormente calcular $\lambda_g$ (formula \ref{eqLambda}), $\gamma_g$ (formula \ref{eqGamma}) y el escalar de mundo pequeño $\sigma$ (formula \ref{eqSW}).
 
 \section{Análisis de datos}
 Todos los análisis estadísticos fueron hechos dentro del entorno de programación para \texttt{R} \texttt{RStudio} \parencite{Rstudio2018}.
@@ -223,7 +223,7 @@ Para el presente proyecto se realizaron cuatro análisis distintos.
 
 \subsection{Análisis 1: Exploración transversal de controles}
 Debido a la escasa investigación sobre la naturaleza de la topología de redes de conectividad funcional en sujetos con dependencia a la cocaína, se realizó una comparación transversal de las diferencias en las métricas de topología de red entre los 46 pacientes diagnosticados con dependencia a la cocaína que tuvieron una medición basal y los datos retomados de los 45 controles sanos.
-En un análisis exploratorio observamos las distintas métricas de topología de red a lo largo de los distintos valores de $\tau$ de umbralizaje. Posteriormente se realizaron distintas regresiones lineales multivariadas para cada métrica de interés (fuerza, densidad, eficiencia local, eficiencia global y métrica de pequeño mundo). Las variables demográficas de edad, sexo y nivel educativo fueron incluidos como covariantes.
+En un análisis exploratorio observamos las distintas métricas de topología de red a lo largo de los distintos valores de $\tau$ de umbralizaje. Posteriormente se realizaron distintas regresiones lineales multivariadas para cada métrica de interés (fuerza, densidad, eficiencia local, eficiencia global y métrica de mundo pequeño). Las variables demográficas de edad, sexo y nivel educativo fueron incluidos como covariantes.
 
 \subsection{Análisis 2: Fase cerrada}
 Dado a la asignación grupal aleatoria del estudio, optamos por no explorar las diferencias demográficas y atribuirlas a efectos aleatorios.
