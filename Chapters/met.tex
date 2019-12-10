@@ -5,12 +5,12 @@ clave S0008-2015-2-260971, bajo la dirección del doctor Eduardo Garza Villarrea
 
 \section{Muestra}
 Para el presente proyecto, tanto pacientes de la clínica de adicciones del INPRFM como externos que cumplieran con el diagnóstico de dependencia de cocaína (F14.2x) del DSM 5 \parencite{APA2013} fueron reclutados para participar en el ensayo clínico.\par
-Cuarenta y seis sujetos fueron asignados aleatoriamente a los distintos grupos de estimulación (Figura \ref{fig:flow}).
+Se asignaron 46 sujetos aleatoriamente a los distintos grupos de estimulación (Figura \ref{fig:flow}).
 Un grupo recibió estimulación sobre la corteza prefrontal dorsolateral izquierda y el otro, un protocolo sham de estimulación simulada sobre la misma área.
 
 \subsection{Grupo control}
 Para la realización del análisis transversal de pacientes adictos y controles sanos, los datos de neuroimagen de una submuestra de 45 sujetos sanos fueron retomados de la base de datos de un proyecto realizado con anterioridad en el INPRFM \parencite{Garza2017}.
-Debido a que la cantidad total de los sujetos sanos de la base de datos de ese estudio es menor al número de participantes reclutados para nuestro proyecto fue imposible parear ambos grupos.
+Debido a que la cantidad total de los sujetos sanos de la base de datos de ese estudio es menor al número de participantes reclutados para nuestro proyecto, fue imposible parear ambos grupos.
 
 \begin{figure}[H]
     \centering
@@ -28,7 +28,7 @@ Todos los participantes debían cumplir con los siguientes criterios para ser re
 \begin{enumerate*}[label=\emph{\alph*}), before=\unskip{: }, itemjoin={{; }}, itemjoin*={{, y }}]
     \item tener una edad mínima de 18 años y máxima de 50 años
     \item ser usuario de cocaína durante al menos dos  años, con un uso promedio actual mínimo de tres veces a la semana y periodos de abstinencia continua menores a un mes durante el último año
-    \item poseer un nivel de lectura de al menos 6to año de primaria
+    \item poseer un nivel de lectura de al menos sexto año de primaria
     \item tener la capacidad de dar un consentimiento informado válido
     \item ser diestro
     \item tener un índice de masa corporal menor o igual a 30
@@ -123,7 +123,7 @@ Se continuó el mantenimiento bajo las mismas condiciones por otras 12 semanas h
 
 \section{Estimulación magnética transcraneal repetitiva}
 \subsection{Localización de la corteza prefrontal dorsolateral}
-El objetivo de la estimulación cortical fue establecido tomando como base puntos de referencia craneales utilizando la distancia teórica entre la región cortical objetivo y un punto en el cuero cabelludo determinado por EMT (procedimiento guiado funcionalmente) \parencite{Sparing2008}.
+El objetivo de la estimulación cortical fue establecido tomando como base puntos de referencia craneales, utilizando la distancia teórica entre la región cortical objetivo y un punto en el cuero cabelludo determinado por EMT (procedimiento guiado funcionalmente) \parencite{Sparing2008}.
 El área cortical motora izquierda fue el punto de referencia.
 M1 fue determinada como la zona en donde hubiera una respuesta motora prominente en el dedo pulgar de la mano contralateral.
 El umbral motor (MT) fue definido como la intensidad de estimulación menor que produjera una respuesta motora observable en al menos tres de cinco pulsos.
@@ -142,7 +142,7 @@ A todos los sujetos durante las dos semanas de fase ciega se les colocó un elec
 \section{Imagen por resonancia magnética}
 \subsection{Adquisición}
 Tomamos las imágenes por resonancia magnética con un resonador Philips Ingenia de \SI{3}{\tesla} (Philips, EEUU) y una antena de cráneo de 32 canales. La corrida consistió en una secuencia estructural T1w de alta definición, una secuencia EPI de fMRI en estado de reposo, una secuencia de difusión HARDI-DWI y una secuencia experimental FAST-DKI. Para la presente investigación, solo utilizamos las secuencias funcional y la estructural.\par
-Para la secuencia funcional, a los pacientes se les instruyó que se recostaran en el resonador moviéndose lo menos posible, que no pensaran en nada en específico y mantuvieran los ojos abiertos. Una cruz de fijación fue proyectada durante los \SI{10}{/minute} de secuencia funcional, pero se les explicó que no tenían que enfocarse en esta. \par
+Para la secuencia funcional, a los pacientes se les instruyó que se recostaran en el resonador moviéndose lo menos posible, que no pensaran en nada en específico y mantuvieran los ojos abiertos. Una cruz de fijación fue proyectada durante los \SI{10}{\minute} de secuencia funcional, pero se les explicó que no tenían que enfocarse en esta. \par
 La fMRI fue tomada con una secuencia EPI (eco-planar) T2* con los siguientes parámetros
 \begin{enumerate*}[label=\emph{\alph*}), before=\unskip{: }, itemjoin={{; }}, itemjoin*={{, y }}]
     \item TR = \SI{2}{\second}
@@ -186,8 +186,8 @@ Una vez obtenidas las matrices de regresiones de ruido de \texttt{FMRIPREP} los 
 Debido a la naturaleza clínica de la muestra y las altas tasas de movimiento (medido por FD), utilizamos la estrategia de preprocesamiento de \textcite{Power2014} de 36 parámetros de regresión y \textit{scrubbing} (eliminación de los volúmenes que sobrepasen un umbral de FD establecido; en nuestro caso de \SI{0.5}{\milli\meter}).
 
 \subsection{Construcción de redes}
-Por medio de la misma herramienta de procesamiento \texttt{xcpEngine} se extrajeron las lineas de tiempo de la señal BOLD de cada uno de los 264 nodos del atlas funcional de \parencite{Power2011} basado en un meta-análisis de datos de fMRI de tareas.\par
-Utilizando \texttt{R v3.5.3} \parencite{R2019,Rstudio2018} creamos matrices de  adyacencia obteniendo el coeficiente de correlación de Pearson $r$ de la señal BOLD entre cada una de las áreas de la parcelación.\par
+Por medio de la misma herramienta de procesamiento \texttt{xcpEngine} se extrajeron las líneas de tiempo de la señal BOLD de cada uno de los 264 nodos del atlas funcional de \parencite{Power2011} basado en un meta-análisis de datos de fMRI de tareas.\par
+Se utilizó \texttt{R v3.5.3} \parencite{R2019,Rstudio2018} para formar las matrices de adyacencia, obteniendo el coeficiente de correlación de Pearson $r$ de la señal BOLD entre cada una de las áreas de la parcelación.\par
 Posteriormente con la intención de eliminar conexiones espúreas y disminuir el ruido dentro de las redes, aplicamos un método de umbralización de consenso donde se reconstruyen las matrices de adyacencia incluyendo solo las conexiones cuyo peso de conexión, o \emph{fuerza}, igualara o excediera un umbral grupal establecido:
 \begin{equation}
     \label{eqn:threshold}
@@ -197,12 +197,12 @@ Posteriormente con la intención de eliminar conexiones espúreas y disminuir el
         0, & \text{de otra forma}
     \end{cases}
 \end{equation}
-dado un umbral grupal $T$ (expresado como porcentaje) y una muestra de redes cerebrales $m$, una arista es tomada como presente en la reconstrucción de la matriz si sobrepasa un umbral de conectividad $\tau$ en al menos $\frac{T}{100}m$ \parencite{DeReus2013}. \par
+dado un umbral grupal $T$ (expresado como porcentaje) y una muestra de redes cerebrales $m$, una arista fue considerada en la reconstrucción de la matriz si sobrepasaba un umbral de conectividad $\tau$ en al menos $\frac{T}{100}m$ \parencite{DeReus2013}. \par
 Para esta investigación los parámetros utilizados fueron $\tau = 0.25$ y $T = 50\%$; es decir, toda arista debía tener un valor de correlación igual o mayor a $0.25r$ en al menos la mitad de los integrantes del grupo para permanecer en la matriz reconstruida.\par
 Del mismo modo, todas las auto-conexiones y conexiones negativas (anti-correlaciones funcionales) fueron retiradas de las matrices antes del análisis \parencite{Rubinov2010}.
 
 \subsection{Medidas topológicas}
-Teniendo las matrices de adyacencia finales, los grafos de la red de conectividad funcional para cada sujeto fueron creados con la paquetería \texttt{brainGraph v2.2} \parencite{Watson2018}. Para cada grafo se extrajeron las siguientes medidas topológicas
+Una vez determinadas las matrices de adyacencia finales, los grafos de la red de conectividad funcional para cada sujeto fueron creados con la paquetería \texttt{brainGraph v2.2} \parencite{Watson2018}. Para cada grafo se extrajeron las siguientes medidas topológicas
 \begin{enumerate*}[label=\emph{\alph*}), before=\unskip{: }, itemjoin={{; }}, itemjoin*={{, y }}]
     \item grado
     \item densidad
@@ -227,16 +227,16 @@ En un análisis exploratorio observamos las distintas métricas de topología de
 
 \subsection{Análisis 2: Fase cerrada}
 Dado a la asignación grupal aleatoria del estudio, optamos por no explorar las diferencias demográficas y atribuirlas a efectos aleatorios.
-Exploramos la relación entre los puntajes reportados en las distintas escalas clínicas por medio de una correlación de pearson.
+Exploramos la relación entre los puntajes reportados en las distintas escalas clínicas por medio de una correlación de Pearson.
 Ambos grupos (estimulación real y estimulación sham) fueron subdivididos a su vez por medio de la mediana del puntaje basal reportado por cada escala y por grupo con la intención de diferenciar los patrones de cambio de los pacientes que comenzaron el tratamiento con una sintomatología elevada de quienes mostraron una sintomatología leve.
 La eficacia del tratamiento fue explorada utilizando regresiones lineales multivariadas para cada escala (VAS, CCQ-G, CCQ-N y BIS-11) usando el grupo de estimulación como predictor y las medidas clínicas basales como covariantes.
 Los cambios en topología de red fueron analizados por medio de modelos de efectos mixtos. Para cada métrica de red, se realizó un modelo distinto buscando la interacción de fase de tratamiento y grupo de estimulación. Además se introdujeron las medidas clínicas y las variables demográficas de edad, sexo y nivel educativo como covariantes.
 
-\subsection{Análisis 3: Fase abierta (3 meses)}
-De forma exploratoria se analizaron los cambios observados posteriores a 3 meses de sesiones semanales de mantenimiento en aquellos sujetos que llegaron hasta la fase T2.
+\subsection{Análisis 3: Fase abierta (tres meses)}
+De forma exploratoria se analizaron los cambios observados posteriores a tres meses de sesiones semanales de mantenimiento en aquellos sujetos que llegaron hasta la fase T2.
 Tanto las escalas clínicas como las métricas de red fueron exploradas por medio de modelos de efectos mixtos buscando la diferencia entre las distintas fases de la medición basal e incluyendo las variables demográficas de edad, sexo y nivel educativo como covariantes; para los modelos de las métricas topológicas además se incluyeron los puntajes clínicos.
 
-\subsection{Análisis 4: Fase abierta (6 meses)}
+\subsection{Análisis 4: Fase abierta (seis meses)}
 Para obtener una medición más objetiva, se decidió separar el análisis longitudinal de mantenimiento en las mediciones a tres y seis meses. Para este segundo análisis, nos enfocamos únicamente en aquellos participantes que completaron todas las fases del estudio y exploramos sus cambios a lo largo de estas.
-De igual forma que el análisis a 3 meses, por medio de modelos de efectos mixtos se exploraron las diferencias con respecto a la medición basal incluyendo edad, sexo y nivel educativo como covariantes.
+De igual forma que el análisis a tres meses, por medio de modelos de efectos mixtos se exploraron las diferencias con respecto a la medición basal incluyendo edad, sexo y nivel educativo como covariantes.
 
